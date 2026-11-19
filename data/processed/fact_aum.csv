@@ -1,0 +1,97 @@
+fund_house,quarter,year,aum_crore,num_schemes
+SBI Mutual Fund,Q1,2022,702514.05,145
+SBI Mutual Fund,Q2,2022,739940.49,146
+SBI Mutual Fund,Q3,2022,773696.42,147
+SBI Mutual Fund,Q4,2022,805381.65,148
+SBI Mutual Fund,Q1,2023,825887.19,147
+SBI Mutual Fund,Q2,2023,846914.12,148
+SBI Mutual Fund,Q3,2023,865574.11,149
+SBI Mutual Fund,Q4,2023,909126.48,150
+SBI Mutual Fund,Q1,2024,946436.15,149
+SBI Mutual Fund,Q2,2024,988819.96,150
+SBI Mutual Fund,Q3,2024,1009308.77,151
+SBI Mutual Fund,Q4,2024,1063757.79,152
+SBI Mutual Fund,Q1,2025,1116026.05,151
+SBI Mutual Fund,Q2,2025,1146640.73,152
+SBI Mutual Fund,Q3,2025,1176870.62,153
+SBI Mutual Fund,Q4,2025,1207962.55,154
+ICICI Prudential Mutual Fund,Q1,2022,525630.72,138
+ICICI Prudential Mutual Fund,Q2,2022,545797.32,139
+ICICI Prudential Mutual Fund,Q3,2022,564964.67,140
+ICICI Prudential Mutual Fund,Q4,2022,582022.66,141
+ICICI Prudential Mutual Fund,Q1,2023,606127.05,140
+ICICI Prudential Mutual Fund,Q2,2023,621208.87,141
+ICICI Prudential Mutual Fund,Q3,2023,639984.95,142
+ICICI Prudential Mutual Fund,Q4,2023,660990.96,143
+ICICI Prudential Mutual Fund,Q1,2024,684761.81,142
+ICICI Prudential Mutual Fund,Q2,2024,717275.1,143
+ICICI Prudential Mutual Fund,Q3,2024,736633.34,144
+ICICI Prudential Mutual Fund,Q4,2024,764624.08,145
+ICICI Prudential Mutual Fund,Q1,2025,795770.67,144
+ICICI Prudential Mutual Fund,Q2,2025,812979.82,145
+ICICI Prudential Mutual Fund,Q3,2025,846526.67,146
+ICICI Prudential Mutual Fund,Q4,2025,868509.57,147
+HDFC Mutual Fund,Q1,2022,470247.33,130
+HDFC Mutual Fund,Q2,2022,495269.66,131
+HDFC Mutual Fund,Q3,2022,521913.74,132
+HDFC Mutual Fund,Q4,2022,547118.99,133
+HDFC Mutual Fund,Q1,2023,563894.47,132
+HDFC Mutual Fund,Q2,2023,577100.05,133
+HDFC Mutual Fund,Q3,2023,602462.53,134
+HDFC Mutual Fund,Q4,2023,623792.92,135
+HDFC Mutual Fund,Q1,2024,638933.21,134
+HDFC Mutual Fund,Q2,2024,662785.35,135
+HDFC Mutual Fund,Q3,2024,676838.78,136
+HDFC Mutual Fund,Q4,2024,711916.77,137
+HDFC Mutual Fund,Q1,2025,732603.15,136
+HDFC Mutual Fund,Q2,2025,764243.02,137
+HDFC Mutual Fund,Q3,2025,787865.69,138
+HDFC Mutual Fund,Q4,2025,817964.03,139
+Nippon India Mutual Fund,Q1,2022,301349.11,115
+Nippon India Mutual Fund,Q2,2022,309325.79,116
+Nippon India Mutual Fund,Q3,2022,326009.42,117
+Nippon India Mutual Fund,Q4,2022,341374.13,118
+Nippon India Mutual Fund,Q1,2023,359426.84,117
+Nippon India Mutual Fund,Q2,2023,377872.25,118
+Nippon India Mutual Fund,Q3,2023,393337.23,119
+Nippon India Mutual Fund,Q4,2023,413895.24,120
+Nippon India Mutual Fund,Q1,2024,423455.08,119
+Nippon India Mutual Fund,Q2,2024,434828.83,120
+Nippon India Mutual Fund,Q3,2024,444213.72,121
+Nippon India Mutual Fund,Q4,2024,458156.06,122
+Nippon India Mutual Fund,Q1,2025,473551.8,121
+Nippon India Mutual Fund,Q2,2025,487520.26,122
+Nippon India Mutual Fund,Q3,2025,511411.59,123
+Nippon India Mutual Fund,Q4,2025,528025.49,124
+Kotak Mahindra Mutual Fund,Q1,2022,293502.32,98
+Kotak Mahindra Mutual Fund,Q2,2022,304947.26,99
+Kotak Mahindra Mutual Fund,Q3,2022,312550.31,100
+Kotak Mahindra Mutual Fund,Q4,2022,327576.76,101
+Kotak Mahindra Mutual Fund,Q1,2023,334983.03,100
+Kotak Mahindra Mutual Fund,Q2,2023,353253.35,101
+Kotak Mahindra Mutual Fund,Q3,2023,369866.35,102
+Kotak Mahindra Mutual Fund,Q4,2023,379836.12,103
+Kotak Mahindra Mutual Fund,Q1,2024,387506.25,102
+Kotak Mahindra Mutual Fund,Q2,2024,406316.25,103
+Kotak Mahindra Mutual Fund,Q3,2024,424494.84,104
+Kotak Mahindra Mutual Fund,Q4,2024,443815.83,105
+Kotak Mahindra Mutual Fund,Q1,2025,464672.72,104
+Kotak Mahindra Mutual Fund,Q2,2025,475170.4,105
+Kotak Mahindra Mutual Fund,Q3,2025,490635.44,106
+Kotak Mahindra Mutual Fund,Q4,2025,502437.88,107
+Aditya Birla Sun Life Mutual Fund,Q1,2022,288807.37,112
+Aditya Birla Sun Life Mutual Fund,Q2,2022,300883.98,113
+Aditya Birla Sun Life Mutual Fund,Q3,2022,310386.32,114
+Aditya Birla Sun Life Mutual Fund,Q4,2022,317284.52,115
+Aditya Birla Sun Life Mutual Fund,Q1,2023,327083.65,114
+Aditya Birla Sun Life Mutual Fund,Q2,2023,337348.0,115
+Aditya Birla Sun Life Mutual Fund,Q3,2023,352709.55,116
+Aditya Birla Sun Life Mutual Fund,Q4,2023,367634.28,117
+Aditya Birla Sun Life Mutual Fund,Q1,2024,386402.91,116
+Aditya Birla Sun Life Mutual Fund,Q2,2024,400517.26,117
+Aditya Birla Sun Life Mutual Fund,Q3,2024,410204.08,118
+Aditya Birla Sun Life Mutual Fund,Q4,2024,428648.32,119
+Aditya Birla Sun Life Mutual Fund,Q1,2025,448635.11,118
+Aditya Birla Sun Life Mutual Fund,Q2,2025,466421.12,119
+Aditya Birla Sun Life Mutual Fund,Q3,2025,488335.38,120
+Aditya Birla Sun Life Mutual Fund,Q4,2025,506541.91,121

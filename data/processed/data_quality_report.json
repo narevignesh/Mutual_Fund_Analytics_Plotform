@@ -1,0 +1,566 @@
+{
+  "timestamp": "2026-11-19T21:09:03.591809",
+  "total_datasets": 10,
+  "total_records": 87941,
+  "dataset_summaries": {
+    "01_fund_master.csv": {
+      "rows": 40,
+      "columns": 13,
+      "column_list": [
+        "amfi_code",
+        "fund_house",
+        "scheme_name",
+        "category",
+        "sub_category",
+        "plan",
+        "launch_date",
+        "benchmark",
+        "expense_ratio_pct",
+        "exit_load_pct",
+        "fund_manager",
+        "risk_category",
+        "sebi_category_code"
+      ],
+      "dtypes": {
+        "amfi_code": "int64",
+        "fund_house": "str",
+        "scheme_name": "str",
+        "category": "str",
+        "sub_category": "str",
+        "plan": "str",
+        "launch_date": "str",
+        "benchmark": "str",
+        "expense_ratio_pct": "float64",
+        "exit_load_pct": "float64",
+        "fund_manager": "str",
+        "risk_category": "str",
+        "sebi_category_code": "str"
+      },
+      "missing_values": {
+        "amfi_code": 0,
+        "fund_house": 0,
+        "scheme_name": 0,
+        "category": 0,
+        "sub_category": 0,
+        "plan": 0,
+        "launch_date": 0,
+        "benchmark": 0,
+        "expense_ratio_pct": 0,
+        "exit_load_pct": 0,
+        "fund_manager": 0,
+        "risk_category": 0,
+        "sebi_category_code": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "amfi_code": 119551,
+          "fund_house": "SBI Mutual Fund",
+          "scheme_name": "SBI Bluechip Fund - Direct Plan - Growth",
+          "category": "Large Cap",
+          "sub_category": "Equity: Large Cap",
+          "plan": "Direct",
+          "launch_date": "2013-01-01",
+          "benchmark": "Nifty 100",
+          "expense_ratio_pct": 0.84,
+          "exit_load_pct": 1.0,
+          "fund_manager": "Sohini Andani",
+          "risk_category": "Very High",
+          "sebi_category_code": "EQ-LC"
+        },
+        {
+          "amfi_code": 125494,
+          "fund_house": "SBI Mutual Fund",
+          "scheme_name": "SBI Small Cap Fund - Direct Plan - Growth",
+          "category": "Small Cap",
+          "sub_category": "Equity: Small Cap",
+          "plan": "Direct",
+          "launch_date": "2013-01-01",
+          "benchmark": "BSE SmallCap",
+          "expense_ratio_pct": 0.72,
+          "exit_load_pct": 1.0,
+          "fund_manager": "R. Srinivasan",
+          "risk_category": "Very High",
+          "sebi_category_code": "EQ-SC"
+        }
+      ]
+    },
+    "02_nav_history.csv": {
+      "rows": 44909,
+      "columns": 3,
+      "column_list": [
+        "amfi_code",
+        "date",
+        "nav"
+      ],
+      "dtypes": {
+        "amfi_code": "int64",
+        "date": "str",
+        "nav": "float64"
+      },
+      "missing_values": {
+        "amfi_code": 0,
+        "date": 0,
+        "nav": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "amfi_code": 119551,
+          "date": "2022-01-03",
+          "nav": 120.9791
+        },
+        {
+          "amfi_code": 119551,
+          "date": "2022-01-04",
+          "nav": 120.9326
+        }
+      ]
+    },
+    "03_aum_by_fund_house.csv": {
+      "rows": 96,
+      "columns": 5,
+      "column_list": [
+        "fund_house",
+        "quarter",
+        "year",
+        "aum_crore",
+        "num_schemes"
+      ],
+      "dtypes": {
+        "fund_house": "str",
+        "quarter": "str",
+        "year": "int64",
+        "aum_crore": "float64",
+        "num_schemes": "int64"
+      },
+      "missing_values": {
+        "fund_house": 0,
+        "quarter": 0,
+        "year": 0,
+        "aum_crore": 0,
+        "num_schemes": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "fund_house": "SBI Mutual Fund",
+          "quarter": "Q1",
+          "year": 2022,
+          "aum_crore": 702514.05,
+          "num_schemes": 145
+        },
+        {
+          "fund_house": "SBI Mutual Fund",
+          "quarter": "Q2",
+          "year": 2022,
+          "aum_crore": 739940.49,
+          "num_schemes": 146
+        }
+      ]
+    },
+    "04_monthly_sip_inflows.csv": {
+      "rows": 48,
+      "columns": 6,
+      "column_list": [
+        "month",
+        "sip_inflow_crore",
+        "active_sip_accounts_crore",
+        "new_sip_accounts_lakh",
+        "sip_aum_lakh_crore",
+        "yoy_growth_pct"
+      ],
+      "dtypes": {
+        "month": "str",
+        "sip_inflow_crore": "float64",
+        "active_sip_accounts_crore": "float64",
+        "new_sip_accounts_lakh": "float64",
+        "sip_aum_lakh_crore": "float64",
+        "yoy_growth_pct": "float64"
+      },
+      "missing_values": {
+        "month": 0,
+        "sip_inflow_crore": 0,
+        "active_sip_accounts_crore": 0,
+        "new_sip_accounts_lakh": 0,
+        "sip_aum_lakh_crore": 0,
+        "yoy_growth_pct": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "month": "2022-01",
+          "sip_inflow_crore": 11591.51,
+          "active_sip_accounts_crore": 5.05,
+          "new_sip_accounts_lakh": 18.41,
+          "sip_aum_lakh_crore": 5.65,
+          "yoy_growth_pct": 22.5
+        },
+        {
+          "month": "2022-02",
+          "sip_inflow_crore": 11910.83,
+          "active_sip_accounts_crore": 5.14,
+          "new_sip_accounts_lakh": 16.23,
+          "sip_aum_lakh_crore": 5.84,
+          "yoy_growth_pct": 23.3
+        }
+      ]
+    },
+    "05_category_inflows.csv": {
+      "rows": 144,
+      "columns": 5,
+      "column_list": [
+        "month",
+        "category",
+        "gross_inflow_crore",
+        "redemption_crore",
+        "net_inflow_crore"
+      ],
+      "dtypes": {
+        "month": "str",
+        "category": "str",
+        "gross_inflow_crore": "float64",
+        "redemption_crore": "float64",
+        "net_inflow_crore": "float64"
+      },
+      "missing_values": {
+        "month": 0,
+        "category": 0,
+        "gross_inflow_crore": 0,
+        "redemption_crore": 0,
+        "net_inflow_crore": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "month": "2024-07",
+          "category": "Large Cap",
+          "gross_inflow_crore": 4477.09,
+          "redemption_crore": 3071.54,
+          "net_inflow_crore": 1405.55
+        },
+        {
+          "month": "2024-07",
+          "category": "Mid Cap",
+          "gross_inflow_crore": 6185.11,
+          "redemption_crore": 3265.08,
+          "net_inflow_crore": 2920.04
+        }
+      ]
+    },
+    "06_industry_folio_count.csv": {
+      "rows": 21,
+      "columns": 5,
+      "column_list": [
+        "month",
+        "equity_folios_crore",
+        "debt_folios_crore",
+        "hybrid_folios_crore",
+        "total_folios_crore"
+      ],
+      "dtypes": {
+        "month": "str",
+        "equity_folios_crore": "float64",
+        "debt_folios_crore": "float64",
+        "hybrid_folios_crore": "float64",
+        "total_folios_crore": "float64"
+      },
+      "missing_values": {
+        "month": 0,
+        "equity_folios_crore": 0,
+        "debt_folios_crore": 0,
+        "hybrid_folios_crore": 0,
+        "total_folios_crore": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "month": "2020-03",
+          "equity_folios_crore": 6.3,
+          "debt_folios_crore": 1.2,
+          "hybrid_folios_crore": 1.1,
+          "total_folios_crore": 8.6
+        },
+        {
+          "month": "2020-06",
+          "equity_folios_crore": 6.77,
+          "debt_folios_crore": 1.22,
+          "hybrid_folios_crore": 1.19,
+          "total_folios_crore": 9.18
+        }
+      ]
+    },
+    "07_scheme_performance.csv": {
+      "rows": 40,
+      "columns": 12,
+      "column_list": [
+        "amfi_code",
+        "return_1yr_pct",
+        "return_3yr_pct",
+        "return_5yr_pct",
+        "benchmark_3yr_pct",
+        "alpha",
+        "beta",
+        "sharpe_ratio",
+        "sortino_ratio",
+        "std_dev_ann_pct",
+        "max_drawdown_pct",
+        "morningstar_rating"
+      ],
+      "dtypes": {
+        "amfi_code": "int64",
+        "return_1yr_pct": "float64",
+        "return_3yr_pct": "float64",
+        "return_5yr_pct": "float64",
+        "benchmark_3yr_pct": "float64",
+        "alpha": "float64",
+        "beta": "float64",
+        "sharpe_ratio": "float64",
+        "sortino_ratio": "float64",
+        "std_dev_ann_pct": "float64",
+        "max_drawdown_pct": "float64",
+        "morningstar_rating": "int64"
+      },
+      "missing_values": {
+        "amfi_code": 0,
+        "return_1yr_pct": 0,
+        "return_3yr_pct": 0,
+        "return_5yr_pct": 0,
+        "benchmark_3yr_pct": 0,
+        "alpha": 0,
+        "beta": 0,
+        "sharpe_ratio": 0,
+        "sortino_ratio": 0,
+        "std_dev_ann_pct": 0,
+        "max_drawdown_pct": 0,
+        "morningstar_rating": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "amfi_code": 119551,
+          "return_1yr_pct": -2.35,
+          "return_3yr_pct": -1.98,
+          "return_5yr_pct": -1.82,
+          "benchmark_3yr_pct": 16.28,
+          "alpha": -2.57,
+          "beta": -0.01,
+          "sharpe_ratio": -0.78,
+          "sortino_ratio": -0.67,
+          "std_dev_ann_pct": 11.55,
+          "max_drawdown_pct": -16.17,
+          "morningstar_rating": 1
+        },
+        {
+          "amfi_code": 125494,
+          "return_1yr_pct": 5.03,
+          "return_3yr_pct": -3.32,
+          "return_5yr_pct": 6.82,
+          "benchmark_3yr_pct": 1.65,
+          "alpha": 6.06,
+          "beta": 0.78,
+          "sharpe_ratio": 0.15,
+          "sortino_ratio": 0.25,
+          "std_dev_ann_pct": 17.61,
+          "max_drawdown_pct": -30.19,
+          "morningstar_rating": 2
+        }
+      ]
+    },
+    "08_investor_transactions.csv": {
+      "rows": 33291,
+      "columns": 13,
+      "column_list": [
+        "investor_id",
+        "transaction_date",
+        "amfi_code",
+        "transaction_type",
+        "amount_inr",
+        "state",
+        "city",
+        "city_tier",
+        "age_group",
+        "gender",
+        "annual_income_lakh",
+        "payment_mode",
+        "kyc_status"
+      ],
+      "dtypes": {
+        "investor_id": "int64",
+        "transaction_date": "str",
+        "amfi_code": "int64",
+        "transaction_type": "str",
+        "amount_inr": "float64",
+        "state": "str",
+        "city": "str",
+        "city_tier": "str",
+        "age_group": "str",
+        "gender": "str",
+        "annual_income_lakh": "float64",
+        "payment_mode": "str",
+        "kyc_status": "str"
+      },
+      "missing_values": {
+        "investor_id": 0,
+        "transaction_date": 0,
+        "amfi_code": 0,
+        "transaction_type": 0,
+        "amount_inr": 0,
+        "state": 0,
+        "city": 0,
+        "city_tier": 0,
+        "age_group": 0,
+        "gender": 0,
+        "annual_income_lakh": 0,
+        "payment_mode": 0,
+        "kyc_status": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 1,
+      "sample_records": [
+        {
+          "investor_id": 1626,
+          "transaction_date": "2022-01-03",
+          "amfi_code": 120505,
+          "transaction_type": "SIP",
+          "amount_inr": 50000.0,
+          "state": "Rajasthan",
+          "city": "Udaipur",
+          "city_tier": "B30",
+          "age_group": "46-55",
+          "gender": "Female",
+          "annual_income_lakh": 39.22,
+          "payment_mode": "Mandate",
+          "kyc_status": "Pending"
+        },
+        {
+          "investor_id": 2815,
+          "transaction_date": "2022-01-03",
+          "amfi_code": 100109,
+          "transaction_type": "Lumpsum",
+          "amount_inr": 250000.0,
+          "state": "Tamil Nadu",
+          "city": "Coimbatore",
+          "city_tier": "B30",
+          "age_group": "18-25",
+          "gender": "Male",
+          "annual_income_lakh": 7.46,
+          "payment_mode": "Net Banking",
+          "kyc_status": "Verified"
+        }
+      ]
+    },
+    "09_portfolio_holdings.csv": {
+      "rows": 320,
+      "columns": 6,
+      "column_list": [
+        "amfi_code",
+        "stock_symbol",
+        "company_name",
+        "sector",
+        "weight_pct",
+        "date"
+      ],
+      "dtypes": {
+        "amfi_code": "int64",
+        "stock_symbol": "str",
+        "company_name": "str",
+        "sector": "str",
+        "weight_pct": "float64",
+        "date": "str"
+      },
+      "missing_values": {
+        "amfi_code": 0,
+        "stock_symbol": 0,
+        "company_name": 0,
+        "sector": 0,
+        "weight_pct": 0,
+        "date": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "amfi_code": 119551,
+          "stock_symbol": "BAJAJFINSV",
+          "company_name": "Bajaj Finserv Ltd.",
+          "sector": "Financial Services",
+          "weight_pct": 3.47,
+          "date": "2025-12-31"
+        },
+        {
+          "amfi_code": 119551,
+          "stock_symbol": "TATAMOTORS",
+          "company_name": "Tata Motors Ltd.",
+          "sector": "Automobile",
+          "weight_pct": 22.25,
+          "date": "2025-12-31"
+        }
+      ]
+    },
+    "10_benchmark_indices.csv": {
+      "rows": 9032,
+      "columns": 4,
+      "column_list": [
+        "index_name",
+        "date",
+        "close_value",
+        "daily_return_pct"
+      ],
+      "dtypes": {
+        "index_name": "str",
+        "date": "str",
+        "close_value": "float64",
+        "daily_return_pct": "float64"
+      },
+      "missing_values": {
+        "index_name": 0,
+        "date": 0,
+        "close_value": 0,
+        "daily_return_pct": 0
+      },
+      "total_nulls": 0,
+      "duplicate_rows": 0,
+      "sample_records": [
+        {
+          "index_name": "Nifty 50",
+          "date": "2022-01-03",
+          "close_value": 17500.0,
+          "daily_return_pct": 0.0
+        },
+        {
+          "index_name": "Nifty 50",
+          "date": "2022-01-04",
+          "close_value": 17486.99,
+          "daily_return_pct": -0.0743
+        }
+      ]
+    }
+  },
+  "integrity_checks": {
+    "amfi_code_validation": {
+      "nav_orphans": [],
+      "transaction_orphans": []
+    },
+    "nav_validity": {
+      "negative_or_zero_navs": 0,
+      "min_nav": 20.1861,
+      "max_nav": 6151.8671
+    },
+    "transaction_validity": {
+      "negative_amounts": 0,
+      "unique_investors": 5000
+    },
+    "portfolio_weight_validity": {
+      "schemes_exceeding_100pct": 0
+    }
+  },
+  "status": "PASS"
+}

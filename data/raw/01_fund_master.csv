@@ -1,0 +1,41 @@
+amfi_code,fund_house,scheme_name,category,sub_category,plan,launch_date,benchmark,expense_ratio_pct,exit_load_pct,fund_manager,risk_category,sebi_category_code
+119551,SBI Mutual Fund,SBI Bluechip Fund - Direct Plan - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.84,1.0,Sohini Andani,Very High,EQ-LC
+125494,SBI Mutual Fund,SBI Small Cap Fund - Direct Plan - Growth,Small Cap,Equity: Small Cap,Direct,2013-01-01,BSE SmallCap,0.72,1.0,R. Srinivasan,Very High,EQ-SC
+101761,SBI Mutual Fund,SBI Flexicap Fund - Direct Plan - Growth,Flexi Cap,Equity: Flexi Cap,Direct,2013-01-01,Nifty 500,0.86,1.0,Dinesh Balachandran,Very High,EQ-FC
+100016,SBI Mutual Fund,SBI Liquid Fund - Direct Plan - Growth,Liquid,Debt: Liquid,Direct,2013-01-01,CRISIL Liquid,0.2,0.0,Rajeev Radhakrishnan,Low to Moderate,DB-LQ
+125497,HDFC Mutual Fund,HDFC Top 100 Fund - Direct Plan - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,1.08,1.0,Rahul Baijal,Very High,EQ-LC
+118989,HDFC Mutual Fund,HDFC Mid-Cap Opportunities Fund - Direct - Growth,Mid Cap,Equity: Mid Cap,Direct,2013-01-01,Nifty Midcap 150,0.76,1.0,Chirag Setalvad,Very High,EQ-MC
+100346,HDFC Mutual Fund,HDFC Flexi Cap Fund - Direct Plan - Growth,Flexi Cap,Equity: Flexi Cap,Direct,2013-01-01,Nifty 500,0.82,1.0,Roshi Jain,Very High,EQ-FC
+101402,HDFC Mutual Fund,HDFC ELSS Tax Saver Fund - Direct - Growth,ELSS,Equity: ELSS,Direct,2013-01-01,Nifty 500,1.12,0.0,Roshi Jain,Very High,EQ-ELSS
+120503,ICICI Prudential Mutual Fund,ICICI Prudential Bluechip Fund - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.88,1.0,Anish Tawakley,Very High,EQ-LC
+101800,ICICI Prudential Mutual Fund,ICICI Prudential Value Discovery Fund - Direct - Growth,Flexi Cap,Equity: Value,Direct,2013-01-01,Nifty 500,1.02,1.0,Sankaran Naren,Very High,EQ-VAL
+100356,ICICI Prudential Mutual Fund,ICICI Prudential Equity & Debt Fund - Direct - Growth,Hybrid,Hybrid: Aggressive,Direct,2013-01-01,CRISIL Hybrid 35+65,1.05,1.0,Sankaran Naren,Very High,HY-AE
+100033,ICICI Prudential Mutual Fund,ICICI Prudential Liquid Fund - Direct - Growth,Liquid,Debt: Liquid,Direct,2013-01-01,CRISIL Liquid,0.22,0.0,Manish Banthia,Low to Moderate,DB-LQ
+118632,Nippon India Mutual Fund,Nippon India Large Cap Fund - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.85,1.0,Sailesh Raj Bhan,Very High,EQ-LC
+118778,Nippon India Mutual Fund,Nippon India Small Cap Fund - Direct - Growth,Small Cap,Equity: Small Cap,Direct,2013-01-01,BSE SmallCap,0.68,1.0,Samir Rachh,Very High,EQ-SC
+135798,Nippon India Mutual Fund,Nippon India Nifty 50 Value 20 Index Fund - Growth,Index,Other: Index Fund,Direct,2015-06-15,Nifty 50,0.3,0.25,Himanshu Mange,Very High,OTH-IDX
+100119,Nippon India Mutual Fund,Nippon India Liquid Fund - Direct - Growth,Liquid,Debt: Liquid,Direct,2013-01-01,CRISIL Liquid,0.21,0.0,Anju Chhajer,Low to Moderate,DB-LQ
+119092,Axis Mutual Fund,Axis Bluechip Fund - Direct Plan - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.78,1.0,Shreyash Devalkar,Very High,EQ-LC
+120505,Axis Mutual Fund,Axis Midcap Fund - Direct Plan - Growth,Mid Cap,Equity: Mid Cap,Direct,2013-01-01,Nifty Midcap 150,0.62,1.0,Shreyash Devalkar,Very High,EQ-MC
+120504,Axis Mutual Fund,Axis ELSS Tax Saver Fund - Direct - Growth,ELSS,Equity: ELSS,Direct,2013-01-01,Nifty 500,0.88,0.0,Ashish Naik,Very High,EQ-ELSS
+112323,Axis Mutual Fund,Axis Liquid Fund - Direct Plan - Growth,Liquid,Debt: Liquid,Direct,2013-01-01,CRISIL Liquid,0.18,0.0,Devang Shah,Low to Moderate,DB-LQ
+120166,Kotak Mahindra Mutual Fund,Kotak Bluechip Fund - Direct Plan - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.7,1.0,Harsha Upadhyaya,Very High,EQ-LC
+120152,Kotak Mahindra Mutual Fund,Kotak Emerging Equity Fund - Direct - Growth,Mid Cap,Equity: Mid Cap,Direct,2013-01-01,Nifty Midcap 150,0.74,1.0,Pankaj Tibrewal,Very High,EQ-MC
+100150,Kotak Mahindra Mutual Fund,Kotak Equity Hybrid Fund - Direct - Growth,Hybrid,Hybrid: Aggressive,Direct,2013-01-01,CRISIL Hybrid 35+65,0.65,1.0,Harsha Upadhyaya,Very High,HY-AE
+100164,Kotak Mahindra Mutual Fund,Kotak Liquid Fund - Direct Plan - Growth,Liquid,Debt: Liquid,Direct,2013-01-01,CRISIL Liquid,0.19,0.0,Deepak Agrawal,Low to Moderate,DB-LQ
+100377,UTI Mutual Fund,UTI Mastershare Unit Scheme - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.98,1.0,Karthikraj Lakshmanan,Very High,EQ-LC
+100350,UTI Mutual Fund,UTI Flexi Cap Fund - Direct Plan - Growth,Flexi Cap,Equity: Flexi Cap,Direct,2013-01-01,Nifty 500,0.92,1.0,Ajay Tyagi,Very High,EQ-FC
+100374,UTI Mutual Fund,UTI Nifty 50 Index Fund - Direct - Growth,Index,Other: Index Fund,Direct,2013-01-01,Nifty 50,0.2,0.0,Sharwan Kumar Goyal,Very High,OTH-IDX
+100064,UTI Mutual Fund,UTI Corporate Bond Fund - Direct - Growth,Debt,Debt: Corporate Bond,Direct,2013-01-01,Gilt Index,0.42,0.0,Sudhir Agrawal,Moderate,DB-CB
+107578,Mirae Asset Mutual Fund,Mirae Asset Large Cap Fund - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,0.58,1.0,Gaurav Misra,Very High,EQ-LC
+149448,Mirae Asset Mutual Fund,Mirae Asset Flexi Cap Fund - Direct - Growth,Flexi Cap,Equity: Flexi Cap,Direct,2023-02-15,Nifty 500,0.65,1.0,Vrijesh Kasera,Very High,EQ-FC
+135781,Mirae Asset Mutual Fund,Mirae Asset ELSS Tax Saver Fund - Direct - Growth,ELSS,Equity: ELSS,Direct,2015-12-28,Nifty 500,0.6,0.0,Neelesh Surana,Very High,EQ-ELSS
+145942,Mirae Asset Mutual Fund,Mirae Asset Corporate Bond Fund - Direct - Growth,Debt,Debt: Corporate Bond,Direct,2021-03-09,Gilt Index,0.35,0.0,Mahendra Jajoo,Moderate,DB-CB
+101037,DSP Mutual Fund,DSP Top 100 Equity Fund - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,1.15,1.0,Abhishek Singh,Very High,EQ-LC
+104481,DSP Mutual Fund,DSP ELSS Tax Saver Fund - Direct - Growth,ELSS,Equity: ELSS,Direct,2013-01-01,Nifty 500,0.81,0.0,Rohit Singhania,Very High,EQ-ELSS
+100109,DSP Mutual Fund,DSP Equity & Bond Fund - Direct - Growth,Hybrid,Hybrid: Aggressive,Direct,2013-01-01,CRISIL Hybrid 35+65,0.79,1.0,Atul Bhole,Very High,HY-AE
+103305,DSP Mutual Fund,DSP Corporate Bond Fund - Direct - Growth,Debt,Debt: Corporate Bond,Direct,2018-09-12,Gilt Index,0.38,0.0,Vikram Chopra,Moderate,DB-CB
+101377,Aditya Birla Sun Life Mutual Fund,Aditya Birla Sun Life Frontline Equity - Direct - Growth,Large Cap,Equity: Large Cap,Direct,2013-01-01,Nifty 100,1.02,1.0,Mahesh Patil,Very High,EQ-LC
+101443,Aditya Birla Sun Life Mutual Fund,Aditya Birla Sun Life Nifty 50 Index Fund - Growth,Index,Other: Index Fund,Direct,2013-01-01,Nifty 50,0.22,0.0,Lovelesh Sharma,Very High,OTH-IDX
+100027,Aditya Birla Sun Life Mutual Fund,Aditya Birla Sun Life Equity Hybrid '95 Fund - Growth,Hybrid,Hybrid: Aggressive,Direct,2013-01-01,CRISIL Hybrid 35+65,1.01,1.0,Dhaval Shah,Very High,HY-AE
+112937,Aditya Birla Sun Life Mutual Fund,Aditya Birla Sun Life Corporate Bond Fund - Growth,Debt,Debt: Corporate Bond,Direct,2013-01-01,Gilt Index,0.36,0.0,Kaustubh Gupta,Moderate,DB-CB

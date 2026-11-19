@@ -1,0 +1,321 @@
+amfi_code,stock_symbol,company_name,sector,weight_pct,date
+119551,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,3.47,2025-12-31
+119551,TATAMOTORS,Tata Motors Ltd.,Automobile,22.25,2025-12-31
+119551,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,9.73,2025-12-31
+119551,ONGC,Oil & Natural Gas Corp Ltd.,Energy,6.75,2025-12-31
+119551,WIPRO,Wipro Ltd.,IT,1.25,2025-12-31
+119551,LT,Larsen & Toubro Ltd.,Infrastructure,1.25,2025-12-31
+119551,ICICIBANK,ICICI Bank Ltd.,Banking,0.44,2025-12-31
+119551,NESTLEIND,Nestle India Ltd.,FMCG,14.87,2025-12-31
+125494,HCLTECH,HCL Technologies Ltd.,IT,9.54,2025-12-31
+125494,MARUTI,Maruti Suzuki India Ltd.,Automobile,0.16,2025-12-31
+125494,AXISBANK,Axis Bank Ltd.,Banking,27.16,2025-12-31
+125494,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,13.85,2025-12-31
+125494,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,1.85,2025-12-31
+125494,RELIANCE,Reliance Industries Ltd.,Energy,1.56,2025-12-31
+125494,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,1.57,2025-12-31
+125494,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,2.81,2025-12-31
+101761,AXISBANK,Axis Bank Ltd.,Banking,5.93,2025-12-31
+101761,ADANIENT,Adani Enterprises Ltd.,Infrastructure,3.61,2025-12-31
+101761,CHOLAFIN,Cholamandalam Investment,Financial Services,9.93,2025-12-31
+101761,ITC,ITC Ltd.,FMCG,1.58,2025-12-31
+101761,INFY,Infosys Ltd.,IT,3.63,2025-12-31
+101761,RELIANCE,Reliance Industries Ltd.,Energy,4.79,2025-12-31
+101761,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,6.39,2025-12-31
+101761,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,16.14,2025-12-31
+100016,ICICIBANK,ICICI Bank Ltd.,Banking,5.04,2025-12-31
+100016,POWERGRID,Power Grid Corp of India,Energy,6.26,2025-12-31
+100016,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,0.33,2025-12-31
+100016,ADANIENT,Adani Enterprises Ltd.,Infrastructure,6.52,2025-12-31
+100016,INFY,Infosys Ltd.,IT,1.3,2025-12-31
+100016,MARUTI,Maruti Suzuki India Ltd.,Automobile,0.47,2025-12-31
+100016,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,20.74,2025-12-31
+100016,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,23.51,2025-12-31
+125497,M&M,Mahindra & Mahindra Ltd.,Automobile,3.55,2025-12-31
+125497,CIPLA,Cipla Ltd.,Healthcare,1.0,2025-12-31
+125497,CHOLAFIN,Cholamandalam Investment,Financial Services,11.25,2025-12-31
+125497,NTPC,NTPC Ltd.,Energy,5.66,2025-12-31
+125497,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,1.27,2025-12-31
+125497,WIPRO,Wipro Ltd.,IT,6.67,2025-12-31
+125497,AXISBANK,Axis Bank Ltd.,Banking,0.34,2025-12-31
+125497,ITC,ITC Ltd.,FMCG,23.43,2025-12-31
+118989,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,6.52,2025-12-31
+118989,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,2.24,2025-12-31
+118989,ITC,ITC Ltd.,FMCG,4.41,2025-12-31
+118989,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,4.75,2025-12-31
+118989,MARUTI,Maruti Suzuki India Ltd.,Automobile,1.23,2025-12-31
+118989,HCLTECH,HCL Technologies Ltd.,IT,20.96,2025-12-31
+118989,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,8.96,2025-12-31
+118989,RELIANCE,Reliance Industries Ltd.,Energy,16.84,2025-12-31
+100346,ICICIBANK,ICICI Bank Ltd.,Banking,11.72,2025-12-31
+100346,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,32.8,2025-12-31
+100346,INFY,Infosys Ltd.,IT,1.19,2025-12-31
+100346,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,2.81,2025-12-31
+100346,M&M,Mahindra & Mahindra Ltd.,Automobile,0.6,2025-12-31
+100346,NESTLEIND,Nestle India Ltd.,FMCG,5.06,2025-12-31
+100346,CIPLA,Cipla Ltd.,Healthcare,6.33,2025-12-31
+100346,RELIANCE,Reliance Industries Ltd.,Energy,4.07,2025-12-31
+101402,BRITANNIA,Britannia Industries Ltd.,FMCG,2.49,2025-12-31
+101402,ADANIENT,Adani Enterprises Ltd.,Infrastructure,1.86,2025-12-31
+101402,POWERGRID,Power Grid Corp of India,Energy,4.41,2025-12-31
+101402,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,0.86,2025-12-31
+101402,CHOLAFIN,Cholamandalam Investment,Financial Services,9.14,2025-12-31
+101402,TCS,Tata Consultancy Services Ltd.,IT,0.44,2025-12-31
+101402,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,24.44,2025-12-31
+101402,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,8.34,2025-12-31
+120503,TCS,Tata Consultancy Services Ltd.,IT,0.06,2025-12-31
+120503,HDFCBANK,HDFC Bank Ltd.,Banking,17.38,2025-12-31
+120503,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,12.62,2025-12-31
+120503,M&M,Mahindra & Mahindra Ltd.,Automobile,13.42,2025-12-31
+120503,NESTLEIND,Nestle India Ltd.,FMCG,15.17,2025-12-31
+120503,RELIANCE,Reliance Industries Ltd.,Energy,0.79,2025-12-31
+120503,CIPLA,Cipla Ltd.,Healthcare,4.56,2025-12-31
+120503,ADANIENT,Adani Enterprises Ltd.,Infrastructure,1.27,2025-12-31
+101800,RELIANCE,Reliance Industries Ltd.,Energy,8.35,2025-12-31
+101800,AXISBANK,Axis Bank Ltd.,Banking,3.44,2025-12-31
+101800,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,0.56,2025-12-31
+101800,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,3.19,2025-12-31
+101800,BRITANNIA,Britannia Industries Ltd.,FMCG,3.36,2025-12-31
+101800,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,11.19,2025-12-31
+101800,INFY,Infosys Ltd.,IT,8.68,2025-12-31
+101800,MARUTI,Maruti Suzuki India Ltd.,Automobile,18.67,2025-12-31
+100356,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,0.87,2025-12-31
+100356,ICICIBANK,ICICI Bank Ltd.,Banking,8.55,2025-12-31
+100356,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,9.8,2025-12-31
+100356,CIPLA,Cipla Ltd.,Healthcare,5.64,2025-12-31
+100356,NTPC,NTPC Ltd.,Energy,10.09,2025-12-31
+100356,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,4.66,2025-12-31
+100356,WIPRO,Wipro Ltd.,IT,5.07,2025-12-31
+100356,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,3.82,2025-12-31
+100033,HDFCBANK,HDFC Bank Ltd.,Banking,1.32,2025-12-31
+100033,CIPLA,Cipla Ltd.,Healthcare,0.37,2025-12-31
+100033,TCS,Tata Consultancy Services Ltd.,IT,11.73,2025-12-31
+100033,TATAMOTORS,Tata Motors Ltd.,Automobile,4.38,2025-12-31
+100033,LT,Larsen & Toubro Ltd.,Infrastructure,8.24,2025-12-31
+100033,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,27.62,2025-12-31
+100033,ITC,ITC Ltd.,FMCG,3.33,2025-12-31
+100033,NTPC,NTPC Ltd.,Energy,6.13,2025-12-31
+118632,ADANIENT,Adani Enterprises Ltd.,Infrastructure,2.03,2025-12-31
+118632,POWERGRID,Power Grid Corp of India,Energy,0.62,2025-12-31
+118632,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,2.67,2025-12-31
+118632,CHOLAFIN,Cholamandalam Investment,Financial Services,1.37,2025-12-31
+118632,HCLTECH,HCL Technologies Ltd.,IT,20.7,2025-12-31
+118632,ICICIBANK,ICICI Bank Ltd.,Banking,12.87,2025-12-31
+118632,ITC,ITC Ltd.,FMCG,7.82,2025-12-31
+118632,TATAMOTORS,Tata Motors Ltd.,Automobile,15.99,2025-12-31
+118778,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,1.48,2025-12-31
+118778,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,16.0,2025-12-31
+118778,ITC,ITC Ltd.,FMCG,5.56,2025-12-31
+118778,WIPRO,Wipro Ltd.,IT,11.82,2025-12-31
+118778,MARUTI,Maruti Suzuki India Ltd.,Automobile,16.24,2025-12-31
+118778,CIPLA,Cipla Ltd.,Healthcare,2.75,2025-12-31
+118778,NTPC,NTPC Ltd.,Energy,0.84,2025-12-31
+118778,LT,Larsen & Toubro Ltd.,Infrastructure,1.86,2025-12-31
+135798,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,19.89,2025-12-31
+135798,LT,Larsen & Toubro Ltd.,Infrastructure,23.01,2025-12-31
+135798,BRITANNIA,Britannia Industries Ltd.,FMCG,0.08,2025-12-31
+135798,WIPRO,Wipro Ltd.,IT,8.34,2025-12-31
+135798,AXISBANK,Axis Bank Ltd.,Banking,6.31,2025-12-31
+135798,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,2.93,2025-12-31
+135798,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,1.49,2025-12-31
+135798,POWERGRID,Power Grid Corp of India,Energy,4.81,2025-12-31
+100119,RELIANCE,Reliance Industries Ltd.,Energy,1.99,2025-12-31
+100119,INFY,Infosys Ltd.,IT,3.72,2025-12-31
+100119,CHOLAFIN,Cholamandalam Investment,Financial Services,6.18,2025-12-31
+100119,NESTLEIND,Nestle India Ltd.,FMCG,2.3,2025-12-31
+100119,AXISBANK,Axis Bank Ltd.,Banking,18.16,2025-12-31
+100119,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,16.7,2025-12-31
+100119,TATAMOTORS,Tata Motors Ltd.,Automobile,1.48,2025-12-31
+100119,ADANIENT,Adani Enterprises Ltd.,Infrastructure,3.5,2025-12-31
+119092,MARUTI,Maruti Suzuki India Ltd.,Automobile,3.38,2025-12-31
+119092,INFY,Infosys Ltd.,IT,0.38,2025-12-31
+119092,NESTLEIND,Nestle India Ltd.,FMCG,9.47,2025-12-31
+119092,ADANIENT,Adani Enterprises Ltd.,Infrastructure,7.03,2025-12-31
+119092,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,0.53,2025-12-31
+119092,HDFCBANK,HDFC Bank Ltd.,Banking,3.29,2025-12-31
+119092,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,24.06,2025-12-31
+119092,POWERGRID,Power Grid Corp of India,Energy,2.76,2025-12-31
+120505,ONGC,Oil & Natural Gas Corp Ltd.,Energy,4.17,2025-12-31
+120505,WIPRO,Wipro Ltd.,IT,26.33,2025-12-31
+120505,SBIN,State Bank of India,Banking,1.72,2025-12-31
+120505,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,6.92,2025-12-31
+120505,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,8.9,2025-12-31
+120505,CHOLAFIN,Cholamandalam Investment,Financial Services,1.68,2025-12-31
+120505,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,8.08,2025-12-31
+120505,ITC,ITC Ltd.,FMCG,2.84,2025-12-31
+120504,ITC,ITC Ltd.,FMCG,11.89,2025-12-31
+120504,RELIANCE,Reliance Industries Ltd.,Energy,9.09,2025-12-31
+120504,HDFCBANK,HDFC Bank Ltd.,Banking,1.12,2025-12-31
+120504,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,21.36,2025-12-31
+120504,HCLTECH,HCL Technologies Ltd.,IT,4.58,2025-12-31
+120504,CIPLA,Cipla Ltd.,Healthcare,2.44,2025-12-31
+120504,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,0.49,2025-12-31
+120504,ADANIENT,Adani Enterprises Ltd.,Infrastructure,10.58,2025-12-31
+112323,NTPC,NTPC Ltd.,Energy,0.13,2025-12-31
+112323,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,5.48,2025-12-31
+112323,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,1.96,2025-12-31
+112323,HCLTECH,HCL Technologies Ltd.,IT,7.92,2025-12-31
+112323,ITC,ITC Ltd.,FMCG,1.46,2025-12-31
+112323,SBIN,State Bank of India,Banking,8.97,2025-12-31
+112323,M&M,Mahindra & Mahindra Ltd.,Automobile,3.74,2025-12-31
+112323,CHOLAFIN,Cholamandalam Investment,Financial Services,21.09,2025-12-31
+120166,NTPC,NTPC Ltd.,Energy,2.68,2025-12-31
+120166,WIPRO,Wipro Ltd.,IT,0.77,2025-12-31
+120166,LT,Larsen & Toubro Ltd.,Infrastructure,16.64,2025-12-31
+120166,TATAMOTORS,Tata Motors Ltd.,Automobile,13.5,2025-12-31
+120166,CIPLA,Cipla Ltd.,Healthcare,1.92,2025-12-31
+120166,ICICIBANK,ICICI Bank Ltd.,Banking,6.94,2025-12-31
+120166,BRITANNIA,Britannia Industries Ltd.,FMCG,10.93,2025-12-31
+120166,CHOLAFIN,Cholamandalam Investment,Financial Services,5.21,2025-12-31
+120152,ICICIBANK,ICICI Bank Ltd.,Banking,2.25,2025-12-31
+120152,NTPC,NTPC Ltd.,Energy,0.8,2025-12-31
+120152,INFY,Infosys Ltd.,IT,18.53,2025-12-31
+120152,ITC,ITC Ltd.,FMCG,18.79,2025-12-31
+120152,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,8.17,2025-12-31
+120152,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,3.37,2025-12-31
+120152,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,3.5,2025-12-31
+120152,M&M,Mahindra & Mahindra Ltd.,Automobile,10.54,2025-12-31
+100150,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,13.28,2025-12-31
+100150,MARUTI,Maruti Suzuki India Ltd.,Automobile,9.22,2025-12-31
+100150,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,6.26,2025-12-31
+100150,SBIN,State Bank of India,Banking,0.54,2025-12-31
+100150,ONGC,Oil & Natural Gas Corp Ltd.,Energy,1.07,2025-12-31
+100150,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,13.93,2025-12-31
+100150,WIPRO,Wipro Ltd.,IT,5.68,2025-12-31
+100150,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,0.06,2025-12-31
+100164,ONGC,Oil & Natural Gas Corp Ltd.,Energy,9.91,2025-12-31
+100164,WIPRO,Wipro Ltd.,IT,0.05,2025-12-31
+100164,SBIN,State Bank of India,Banking,1.6,2025-12-31
+100164,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,7.24,2025-12-31
+100164,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,10.71,2025-12-31
+100164,ITC,ITC Ltd.,FMCG,9.6,2025-12-31
+100164,CIPLA,Cipla Ltd.,Healthcare,2.31,2025-12-31
+100164,ADANIENT,Adani Enterprises Ltd.,Infrastructure,11.33,2025-12-31
+100377,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,2.92,2025-12-31
+100377,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,10.19,2025-12-31
+100377,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,7.79,2025-12-31
+100377,BRITANNIA,Britannia Industries Ltd.,FMCG,14.05,2025-12-31
+100377,M&M,Mahindra & Mahindra Ltd.,Automobile,7.96,2025-12-31
+100377,ONGC,Oil & Natural Gas Corp Ltd.,Energy,6.24,2025-12-31
+100377,AXISBANK,Axis Bank Ltd.,Banking,0.73,2025-12-31
+100377,TCS,Tata Consultancy Services Ltd.,IT,3.41,2025-12-31
+100350,BRITANNIA,Britannia Industries Ltd.,FMCG,1.5,2025-12-31
+100350,POWERGRID,Power Grid Corp of India,Energy,19.43,2025-12-31
+100350,WIPRO,Wipro Ltd.,IT,2.69,2025-12-31
+100350,ADANIENT,Adani Enterprises Ltd.,Infrastructure,11.97,2025-12-31
+100350,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,5.36,2025-12-31
+100350,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,8.52,2025-12-31
+100350,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,3.76,2025-12-31
+100350,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,4.63,2025-12-31
+100374,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,1.6,2025-12-31
+100374,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,9.46,2025-12-31
+100374,CIPLA,Cipla Ltd.,Healthcare,2.43,2025-12-31
+100374,RELIANCE,Reliance Industries Ltd.,Energy,0.18,2025-12-31
+100374,LT,Larsen & Toubro Ltd.,Infrastructure,7.65,2025-12-31
+100374,ICICIBANK,ICICI Bank Ltd.,Banking,1.44,2025-12-31
+100374,NESTLEIND,Nestle India Ltd.,FMCG,20.82,2025-12-31
+100374,INFY,Infosys Ltd.,IT,22.71,2025-12-31
+100064,AXISBANK,Axis Bank Ltd.,Banking,2.04,2025-12-31
+100064,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,0.07,2025-12-31
+100064,BRITANNIA,Britannia Industries Ltd.,FMCG,11.6,2025-12-31
+100064,WIPRO,Wipro Ltd.,IT,2.46,2025-12-31
+100064,ONGC,Oil & Natural Gas Corp Ltd.,Energy,14.97,2025-12-31
+100064,TATAMOTORS,Tata Motors Ltd.,Automobile,14.59,2025-12-31
+100064,ADANIENT,Adani Enterprises Ltd.,Infrastructure,8.44,2025-12-31
+100064,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,1.54,2025-12-31
+107578,HCLTECH,HCL Technologies Ltd.,IT,14.05,2025-12-31
+107578,POWERGRID,Power Grid Corp of India,Energy,2.81,2025-12-31
+107578,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,1.37,2025-12-31
+107578,NESTLEIND,Nestle India Ltd.,FMCG,6.0,2025-12-31
+107578,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,20.3,2025-12-31
+107578,HDFCBANK,HDFC Bank Ltd.,Banking,8.79,2025-12-31
+107578,MARUTI,Maruti Suzuki India Ltd.,Automobile,6.23,2025-12-31
+107578,ADANIENT,Adani Enterprises Ltd.,Infrastructure,0.75,2025-12-31
+149448,ADANIENT,Adani Enterprises Ltd.,Infrastructure,21.06,2025-12-31
+149448,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,0.69,2025-12-31
+149448,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,3.34,2025-12-31
+149448,WIPRO,Wipro Ltd.,IT,9.59,2025-12-31
+149448,MARUTI,Maruti Suzuki India Ltd.,Automobile,6.17,2025-12-31
+149448,POWERGRID,Power Grid Corp of India,Energy,5.45,2025-12-31
+149448,SBIN,State Bank of India,Banking,5.54,2025-12-31
+149448,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,2.04,2025-12-31
+135781,ITC,ITC Ltd.,FMCG,8.68,2025-12-31
+135781,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,8.7,2025-12-31
+135781,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,10.57,2025-12-31
+135781,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,12.8,2025-12-31
+135781,LT,Larsen & Toubro Ltd.,Infrastructure,3.75,2025-12-31
+135781,TCS,Tata Consultancy Services Ltd.,IT,3.65,2025-12-31
+135781,RELIANCE,Reliance Industries Ltd.,Energy,8.39,2025-12-31
+135781,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,5.5,2025-12-31
+145942,POWERGRID,Power Grid Corp of India,Energy,14.83,2025-12-31
+145942,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,20.6,2025-12-31
+145942,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,3.85,2025-12-31
+145942,BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile,4.4,2025-12-31
+145942,AXISBANK,Axis Bank Ltd.,Banking,0.92,2025-12-31
+145942,WIPRO,Wipro Ltd.,IT,8.06,2025-12-31
+145942,ADANIENT,Adani Enterprises Ltd.,Infrastructure,0.34,2025-12-31
+145942,ITC,ITC Ltd.,FMCG,5.85,2025-12-31
+101037,ONGC,Oil & Natural Gas Corp Ltd.,Energy,4.92,2025-12-31
+101037,WIPRO,Wipro Ltd.,IT,13.02,2025-12-31
+101037,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,0.45,2025-12-31
+101037,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,0.55,2025-12-31
+101037,SBIN,State Bank of India,Banking,25.2,2025-12-31
+101037,LT,Larsen & Toubro Ltd.,Infrastructure,6.51,2025-12-31
+101037,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,1.98,2025-12-31
+101037,MARUTI,Maruti Suzuki India Ltd.,Automobile,10.76,2025-12-31
+104481,KOTAKBANK,Kotak Mahindra Bank Ltd.,Banking,3.15,2025-12-31
+104481,RELIANCE,Reliance Industries Ltd.,Energy,12.65,2025-12-31
+104481,HCLTECH,HCL Technologies Ltd.,IT,1.16,2025-12-31
+104481,NESTLEIND,Nestle India Ltd.,FMCG,0.69,2025-12-31
+104481,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,9.83,2025-12-31
+104481,ADANIENT,Adani Enterprises Ltd.,Infrastructure,10.09,2025-12-31
+104481,M&M,Mahindra & Mahindra Ltd.,Automobile,13.16,2025-12-31
+104481,APOLLOHOSP,Apollo Hospitals Enterprise,Healthcare,16.79,2025-12-31
+100109,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,6.72,2025-12-31
+100109,SBIN,State Bank of India,Banking,3.61,2025-12-31
+100109,ONGC,Oil & Natural Gas Corp Ltd.,Energy,14.68,2025-12-31
+100109,BRITANNIA,Britannia Industries Ltd.,FMCG,2.92,2025-12-31
+100109,M&M,Mahindra & Mahindra Ltd.,Automobile,5.35,2025-12-31
+100109,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,0.76,2025-12-31
+100109,ADANIENT,Adani Enterprises Ltd.,Infrastructure,0.24,2025-12-31
+100109,INFY,Infosys Ltd.,IT,30.44,2025-12-31
+103305,ONGC,Oil & Natural Gas Corp Ltd.,Energy,11.61,2025-12-31
+103305,ULTRACEMCO,UltraTech Cement Ltd.,Infrastructure,5.13,2025-12-31
+103305,TATAMOTORS,Tata Motors Ltd.,Automobile,1.86,2025-12-31
+103305,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,1.66,2025-12-31
+103305,HDFCBANK,HDFC Bank Ltd.,Banking,2.81,2025-12-31
+103305,CIPLA,Cipla Ltd.,Healthcare,7.77,2025-12-31
+103305,TCS,Tata Consultancy Services Ltd.,IT,12.23,2025-12-31
+103305,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,10.53,2025-12-31
+101377,BRITANNIA,Britannia Industries Ltd.,FMCG,16.85,2025-12-31
+101377,WIPRO,Wipro Ltd.,IT,7.28,2025-12-31
+101377,HDFCBANK,HDFC Bank Ltd.,Banking,4.4,2025-12-31
+101377,ONGC,Oil & Natural Gas Corp Ltd.,Energy,5.15,2025-12-31
+101377,SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,2.96,2025-12-31
+101377,TATAMOTORS,Tata Motors Ltd.,Automobile,1.55,2025-12-31
+101377,LT,Larsen & Toubro Ltd.,Infrastructure,2.39,2025-12-31
+101377,CHOLAFIN,Cholamandalam Investment,Financial Services,7.71,2025-12-31
+101443,BRITANNIA,Britannia Industries Ltd.,FMCG,1.48,2025-12-31
+101443,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,0.57,2025-12-31
+101443,HCLTECH,HCL Technologies Ltd.,IT,0.5,2025-12-31
+101443,NTPC,NTPC Ltd.,Energy,23.23,2025-12-31
+101443,MARUTI,Maruti Suzuki India Ltd.,Automobile,14.61,2025-12-31
+101443,LT,Larsen & Toubro Ltd.,Infrastructure,7.72,2025-12-31
+101443,ICICIBANK,ICICI Bank Ltd.,Banking,1.24,2025-12-31
+101443,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,8.13,2025-12-31
+100027,HDFCBANK,HDFC Bank Ltd.,Banking,2.33,2025-12-31
+100027,BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,6.98,2025-12-31
+100027,HINDUNILVR,Hindustan Unilever Ltd.,FMCG,6.24,2025-12-31
+100027,RELIANCE,Reliance Industries Ltd.,Energy,11.74,2025-12-31
+100027,MARUTI,Maruti Suzuki India Ltd.,Automobile,12.37,2025-12-31
+100027,LT,Larsen & Toubro Ltd.,Infrastructure,0.57,2025-12-31
+100027,INFY,Infosys Ltd.,IT,5.76,2025-12-31
+100027,CIPLA,Cipla Ltd.,Healthcare,12.07,2025-12-31
+112937,HDFCBANK,HDFC Bank Ltd.,Banking,14.4,2025-12-31
+112937,DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,7.98,2025-12-31
+112937,CHOLAFIN,Cholamandalam Investment,Financial Services,1.32,2025-12-31
+112937,LT,Larsen & Toubro Ltd.,Infrastructure,0.54,2025-12-31
+112937,TATAMOTORS,Tata Motors Ltd.,Automobile,7.63,2025-12-31
+112937,WIPRO,Wipro Ltd.,IT,0.2,2025-12-31
+112937,NTPC,NTPC Ltd.,Energy,6.54,2025-12-31
+112937,BRITANNIA,Britannia Industries Ltd.,FMCG,20.9,2025-12-31
