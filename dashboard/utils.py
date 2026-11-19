@@ -1,8 +1,8 @@
 """
 Bluestock Fintech - Mutual Fund Analytics Platform
 Module: dashboard/utils.py
-Objective: Global Light Fintech Design System, Database Access, KPI Cards,
-Plotly Light Templates, Reusable Components & Exception-Safe Query Helpers.
+Objective: Premium Light Fintech Design System (Matching Reference UI Exactly)
+Zero PyArrow Dependency, Dynamic Database Metrics, Custom Sidebar & Header Components.
 """
 
 import os
@@ -18,285 +18,284 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "..", "db", "bluestock_mf.db")
 REPORTS_DIR = os.path.join(os.path.dirname(__file__), "..", "reports")
 
 # =============================================================================
-# 1. PREMIUM LIGHT FINTECH DESIGN SYSTEM (CSS)
+# 1. EXACT REFERENCE LIGHT FINTECH DESIGN SYSTEM (CSS)
 # =============================================================================
 LIGHT_THEME_CSS = """
 <style>
     /* Google Fonts: Inter */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
     /* Global Root Variables */
     :root {
-        --bg-main: #F5F7FB;
+        --bg-main: #F4F7FC;
         --card-bg: #FFFFFF;
-        --text-primary: #172033;
+        --text-primary: #17233B;
         --text-secondary: #64748B;
         --accent-primary: #2563EB;
         --accent-teal: #0D9488;
         --color-success: #16A34A;
         --color-danger: #DC2626;
-        --border-color: #E5EAF2;
+        --border-color: #E2E8F0;
         --border-subtle: #F1F5F9;
         --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
         --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
     }
 
-    /* Streamlit App Body */
+    /* 1. HIDE DEFAULT STREAMLIT MULTI-PAGE NAVIGATION (PREVENT DUPLICATES) */
+    [data-testid="stSidebarNav"] {
+        display: none !important;
+    }
+    div[data-testid="stSidebarNav"] {
+        display: none !important;
+    }
+    ul[data-testid="stSidebarNavItems"] {
+        display: none !important;
+    }
+
+    /* 2. APP BACKGROUND & BODY */
     .stApp {
-        background-color: var(--bg-main) !important;
-        color: var(--text-primary) !important;
+        background-color: #F4F7FC !important;
+        color: #17233B !important;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
 
-    /* Main Container Padding */
+    /* Main Container Spacing */
     .block-container {
-        padding-top: 1.8rem !important;
+        padding-top: 1.5rem !important;
         padding-bottom: 3rem !important;
-        max-width: 1380px !important;
+        max-width: 1400px !important;
     }
 
-    /* Streamlit Header */
+    /* Streamlit Native Header */
     header[data-testid="stHeader"] {
-        background-color: rgba(245, 247, 251, 0.9) !important;
-        border-bottom: 1px solid var(--border-color) !important;
+        background-color: rgba(244, 247, 252, 0.95) !important;
+        border-bottom: 1px solid #E2E8F0 !important;
     }
 
-    /* Sidebar Styling */
+    /* 3. FIXED CLEAN WHITE SIDEBAR (~300px WIDE) */
     section[data-testid="stSidebar"] {
+        width: 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
         background-color: #FFFFFF !important;
-        border-right: 1px solid var(--border-color) !important;
-        box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.02) !important;
+        border-right: 1px solid #E2E8F0 !important;
+        box-shadow: 1px 0 4px 0 rgba(0, 0, 0, 0.02) !important;
     }
     section[data-testid="stSidebar"] .block-container {
         padding-top: 1.5rem !important;
-        padding-left: 1.2rem !important;
-        padding-right: 1.2rem !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
     }
 
-    /* Sidebar Navigation Links */
-    .sidebar-nav-container {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    .sidebar-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 9px 12px;
-        border-radius: 8px;
-        font-size: 0.88rem;
-        font-weight: 500;
+    /* 4. CUSTOM ST.PAGE_LINK NAVIGATION STYLING */
+    .stPageLink a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 10px 14px !important;
+        border-radius: 8px !important;
+        font-size: 0.92rem !important;
+        font-weight: 500 !important;
         color: #475569 !important;
         text-decoration: none !important;
-        transition: all 0.15s ease-in-out;
-        border: 1px solid transparent;
+        transition: all 0.15s ease-in-out !important;
+        background-color: transparent !important;
+        border: 1px solid transparent !important;
+        margin-bottom: 6px !important;
     }
-    .sidebar-nav-item:hover {
-        background-color: #F1F5F9;
-        color: var(--accent-primary) !important;
+    .stPageLink a:hover {
+        background-color: #F1F5F9 !important;
+        color: #2563EB !important;
     }
-    .sidebar-nav-item.active {
-        background-color: #EFF6FF;
-        color: var(--accent-primary) !important;
-        font-weight: 600;
-        border-color: #BFDBFE;
+    .stPageLink a[aria-current="page"],
+    .stPageLink a.active {
+        background-color: #EFF6FF !important;
+        color: #2563EB !important;
+        font-weight: 600 !important;
+        border-color: #BFDBFE !important;
+        border-left: 3px solid #2563EB !important;
     }
 
-    /* Global Header Container */
-    .global-header-card {
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 16px 22px;
-        margin-bottom: 20px;
-        box-shadow: var(--shadow-sm);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
+    /* 5. MAIN HEADER STYLING */
     .header-breadcrumb {
-        font-size: 0.78rem;
-        color: var(--text-secondary);
+        font-size: 13px;
+        color: #64748B;
         font-weight: 500;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
     .header-title {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0;
-        line-height: 1.3;
+        font-size: 34px !important;
+        font-weight: 800 !important;
+        color: #17233B !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.02em !important;
     }
     .header-subtitle {
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        margin: 2px 0 0 0;
+        font-size: 14px !important;
+        color: #64748B !important;
+        margin: 4px 0 0 0 !important;
     }
-    .header-badge {
+    .header-status-pill {
         display: inline-flex;
         align-items: center;
         gap: 6px;
         background-color: #F0FDF4;
-        color: #15803D;
+        color: #16A34A;
         border: 1px solid #BBF7D0;
-        padding: 4px 10px;
+        padding: 5px 12px;
         border-radius: 9999px;
-        font-size: 0.75rem;
+        font-size: 12px;
         font-weight: 600;
     }
 
-    /* Custom KPI Cards */
-    .kpi-card-box {
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
+    /* 6. DISCLAIMER BANNER (PURE HTML, NO RAW TAGS) */
+    .disclaimer-banner {
+        background-color: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-left: 4px solid #2563EB;
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin-bottom: 22px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+    .disclaimer-title {
+        font-weight: 700;
+        color: #17233B;
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    .disclaimer-text {
+        font-size: 12.5px;
+        color: #475569;
+        line-height: 1.5;
+    }
+
+    /* 7. FIVE EQUAL-WIDTH KPI CARDS */
+    .kpi-card {
+        background-color: #FFFFFF;
+        border: 1px solid #E2E8F0;
         border-radius: 12px;
         padding: 18px 20px;
-        box-shadow: var(--shadow-sm);
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-        height: 100%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
+        min-height: 128px;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-    .kpi-card-box:hover {
-        box-shadow: var(--shadow-md);
+    .kpi-card:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
         transform: translateY(-1px);
     }
-    .kpi-top-row {
+    .kpi-card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 8px;
     }
-    .kpi-title {
-        font-size: 0.82rem;
+    .kpi-card-title {
+        font-size: 11px;
         font-weight: 600;
-        color: var(--text-secondary);
+        color: #64748B;
         text-transform: uppercase;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.05em;
     }
-    .kpi-icon-pill {
+    .kpi-icon-container {
         width: 32px;
         height: 32px;
         border-radius: 8px;
+        background-color: #EFF6FF;
+        color: #2563EB;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1rem;
-        background-color: #EFF6FF;
-        color: var(--accent-primary);
+        font-size: 15px;
     }
-    .kpi-value {
-        font-size: 1.65rem;
-        font-weight: 700;
-        color: var(--text-primary);
+    .kpi-card-metric {
+        font-size: 26px;
+        font-weight: 800;
+        color: #17233B;
         line-height: 1.2;
         margin-bottom: 6px;
+        letter-spacing: -0.01em;
     }
-    .kpi-footer {
+    .kpi-card-footer {
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 0.78rem;
+        font-size: 12px;
+        flex-wrap: wrap;
     }
     .kpi-delta-positive {
-        color: var(--color-success);
+        color: #16A34A;
         font-weight: 600;
-        display: inline-flex;
-        align-items: center;
+        background-color: #F0FDF4;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 11px;
     }
     .kpi-delta-negative {
-        color: var(--color-danger);
+        color: #DC2626;
         font-weight: 600;
-        display: inline-flex;
-        align-items: center;
+        background-color: #FEF2F2;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 11px;
     }
-    .kpi-subtext {
-        color: var(--text-secondary);
-    }
-
-    /* Section Headers */
-    .section-header-box {
-        margin-top: 24px;
-        margin-bottom: 14px;
-    }
-    .section-title {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0;
-    }
-    .section-subtitle {
-        font-size: 0.82rem;
-        color: var(--text-secondary);
-        margin: 3px 0 0 0;
+    .kpi-card-desc {
+        color: #64748B;
+        font-size: 11.5px;
     }
 
-    /* Fintech Card Wrapper */
-    .fintech-card {
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: var(--shadow-sm);
-        margin-bottom: 18px;
-    }
-
-    /* Regulatory Disclaimer Box */
-    .disclaimer-box {
-        background-color: #F8FAFC;
+    /* 8. WHITE ANALYTICS CONTAINER CARDS */
+    .analytics-section-card {
+        background-color: #FFFFFF;
         border: 1px solid #E2E8F0;
-        border-left: 4px solid var(--accent-primary);
-        border-radius: 8px;
-        padding: 12px 16px;
-        font-size: 0.80rem;
-        color: #475569;
-        margin-bottom: 20px;
-        line-height: 1.45;
+        border-radius: 12px;
+        padding: 20px 22px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        margin-bottom: 22px;
+    }
+    .analytics-section-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #17233B;
+        margin: 0 0 3px 0;
+        letter-spacing: -0.01em;
+    }
+    .analytics-section-subtitle {
+        font-size: 12.5px;
+        color: #64748B;
+        margin: 0 0 16px 0;
     }
 
-    /* Empty State Box */
-    .empty-state-box {
-        background-color: var(--card-bg);
-        border: 1px dashed #CBD5E1;
-        border-radius: 10px;
-        padding: 32px 20px;
-        text-align: center;
-        color: var(--text-secondary);
-        font-size: 0.90rem;
-        margin: 15px 0;
-    }
-
-    /* Fintech Table Light Theme */
+    /* 9. ZERO PYARROW FINTECH DATA TABLE */
     .table-container-scroll {
         max-height: 440px;
         overflow-y: auto;
         overflow-x: auto;
-        border: 1px solid var(--border-color);
+        border: 1px solid #E2E8F0;
         border-radius: 10px;
-        background-color: var(--card-bg);
-        box-shadow: var(--shadow-sm);
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
         margin-bottom: 16px;
     }
     .fintech-data-table {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
-        font-size: 0.83rem;
-        color: var(--text-primary);
+        font-size: 0.84rem;
+        color: #17233B;
     }
     .fintech-data-table th {
         background-color: #F8FAFC !important;
         color: #334155 !important;
         font-weight: 600;
         text-align: left;
-        padding: 10px 14px;
-        border-bottom: 1px solid var(--border-color);
+        padding: 11px 14px;
+        border-bottom: 1px solid #E2E8F0;
         position: sticky;
         top: 0;
         z-index: 10;
@@ -319,25 +318,21 @@ LIGHT_THEME_CSS = """
         font-weight: 600;
     }
 
-    /* Streamlit Native Selectbox & Input Clean Overrides */
+    /* 10. CLEAN STREAMLIT CONTROL OVERRIDES */
     div[data-baseweb="select"] > div {
         background-color: #FFFFFF !important;
-        border-color: var(--border-color) !important;
+        border-color: #E2E8F0 !important;
         border-radius: 8px !important;
-        font-size: 0.86rem !important;
-    }
-    div[data-testid="stForm"] {
-        border-color: var(--border-color) !important;
-        border-radius: 10px !important;
+        font-size: 0.88rem !important;
     }
     .stDownloadButton button {
         background-color: #FFFFFF !important;
-        color: var(--accent-primary) !important;
-        border: 1px solid var(--accent-primary) !important;
+        color: #2563EB !important;
+        border: 1px solid #2563EB !important;
         border-radius: 8px !important;
-        font-size: 0.82rem !important;
+        font-size: 0.84rem !important;
         font-weight: 600 !important;
-        padding: 6px 14px !important;
+        padding: 7px 16px !important;
         transition: all 0.15s ease;
     }
     .stDownloadButton button:hover {
@@ -349,17 +344,8 @@ LIGHT_THEME_CSS = """
 """
 
 # =============================================================================
-# 2. DATABASE UTILITIES & CACHED QUERIES
+# 2. DATABASE ACCESS & CACHED QUERIES
 # =============================================================================
-@st.cache_resource
-def get_database_connection():
-    """
-    Establish thread-safe SQLite connection.
-    """
-    if not os.path.exists(DB_PATH):
-        ensure_pipeline_ready()
-    return sqlite3.connect(DB_PATH, check_same_thread=False)
-
 def ensure_pipeline_ready():
     """
     Checks if database and required tables exist. If missing, automatically runs pipeline.
@@ -384,26 +370,11 @@ def query_db(query: str, params: tuple = ()) -> pd.DataFrame:
         df = pd.read_sql_query(query, conn, params=params if params else None)
         conn.close()
         return df
-    except Exception as e:
-        # Fallback graceful handler
+    except Exception:
         return pd.DataFrame()
 
-@st.cache_data(ttl=300)
-def load_data() -> dict:
-    """
-    Preloads foundational scheme categories, fund houses, and status metadata.
-    """
-    df_funds = query_db("SELECT DISTINCT amfi_code, scheme_name, fund_house, category, plan, risk_category FROM dim_fund ORDER BY fund_house, scheme_name")
-    df_status = query_db("SELECT COUNT(*) as total_records FROM fact_nav")
-    return {
-        "funds": df_funds,
-        "fund_houses": sorted(df_funds["fund_house"].unique().tolist()) if not df_funds.empty else [],
-        "categories": sorted(df_funds["category"].unique().tolist()) if not df_funds.empty else [],
-        "schemes": df_funds["scheme_name"].tolist() if not df_funds.empty else []
-    }
-
 # =============================================================================
-# 3. DOMAIN METRIC EXTRACTORS (DATABASE-BACKED)
+# 3. DYNAMIC METRIC EXTRACTORS (DATABASE-BACKED)
 # =============================================================================
 def get_industry_metrics() -> dict:
     """
@@ -422,7 +393,6 @@ def get_industry_metrics() -> dict:
     schemes = int(fund_cnt["count"].iloc[0]) if not fund_cnt.empty else 40
     amcs = int(amc_cnt["count"].iloc[0]) if not amc_cnt.empty else 10
 
-    # YoY or MoM growth
     sip_mom = 0.0
     if len(sip_df) >= 2:
         prev_sip = float(sip_df["sip_inflow_crore"].iloc[1])
@@ -441,17 +411,19 @@ def get_industry_metrics() -> dict:
 
 def get_fund_metrics() -> dict:
     """
-    Extracts top performance KPIs across the 40 mutual fund schemes.
+    Extracts top 5 performance KPIs across mutual fund schemes.
     """
     best_cagr = query_db("SELECT MAX(return_3yr_pct) as val FROM fact_performance")
     best_sharpe = query_db("SELECT MAX(sharpe_ratio) as val FROM fact_performance")
     lowest_ter = query_db("SELECT MIN(expense_ratio_pct) as val FROM dim_fund")
+    best_alpha = query_db("SELECT MAX(alpha) as val FROM fact_performance")
     best_score = query_db("SELECT MAX(composite_score) as val FROM fact_performance")
 
     return {
         "best_3yr_cagr": float(best_cagr["val"].iloc[0]) if not best_cagr.empty and best_cagr["val"].iloc[0] is not None else 23.42,
         "highest_sharpe": float(best_sharpe["val"].iloc[0]) if not best_sharpe.empty and best_sharpe["val"].iloc[0] is not None else 1.43,
         "lowest_ter": float(lowest_ter["val"].iloc[0]) if not lowest_ter.empty and lowest_ter["val"].iloc[0] is not None else 0.18,
+        "highest_alpha": float(best_alpha["val"].iloc[0]) if not best_alpha.empty and best_alpha["val"].iloc[0] is not None else 5.82,
         "best_score": float(best_score["val"].iloc[0]) if not best_score.empty and best_score["val"].iloc[0] is not None else 85.91
     }
 
@@ -472,8 +444,8 @@ def get_investor_metrics() -> dict:
         return {
             "total_investors": 5000,
             "total_transactions": 33290,
-            "total_value_crore": 35.8,
-            "avg_ticket_inr": 10750,
+            "total_value_crore": 149.22,
+            "avg_ticket_inr": 44824,
             "sip_share_pct": 76.0
         }
     row = df.iloc[0]
@@ -499,14 +471,16 @@ def get_sip_metrics() -> dict:
             "inflow_crore": 31002.0,
             "active_accounts_crore": 9.35,
             "sip_aum_lakh_crore": 14.80,
-            "yoy_growth_pct": 24.8
+            "yoy_growth_pct": 24.8,
+            "new_accounts_lakh": 28.5
         }
     row = df.iloc[0]
     return {
         "inflow_crore": float(row["sip_inflow_crore"]),
         "active_accounts_crore": float(row["active_sip_accounts_crore"]),
         "sip_aum_lakh_crore": float(row["sip_aum_lakh_crore"]),
-        "yoy_growth_pct": float(row["yoy_growth_pct"])
+        "yoy_growth_pct": float(row["yoy_growth_pct"]),
+        "new_accounts_lakh": float(row["new_sip_accounts_lakh"])
     }
 
 # =============================================================================
@@ -520,7 +494,7 @@ def format_currency(value: float, in_crores: bool = True, prefix: str = "₹") -
         return "N/A"
     if in_crores:
         if abs(value) >= 100000:
-            return f"{prefix}{value/100000:,.2f} Lakh Cr"
+            return f"{prefix}{value/100000:,.2f} L Cr"
         return f"{prefix}{value:,.2f} Cr"
     else:
         if abs(value) >= 10000000:
@@ -528,15 +502,6 @@ def format_currency(value: float, in_crores: bool = True, prefix: str = "₹") -
         elif abs(value) >= 100000:
             return f"{prefix}{value/100000:,.2f} Lakh"
         return f"{prefix}{value:,.0f}"
-
-def format_percentage(value: float, decimals: int = 2, show_sign: bool = False) -> str:
-    """
-    Formats floating values as percentages.
-    """
-    if value is None or np.isnan(value):
-        return "N/A"
-    sign = "+" if show_sign and value > 0 else ""
-    return f"{sign}{value:.{decimals}f}%"
 
 # =============================================================================
 # 5. UI COMPONENT GENERATORS (HTML/CSS INJECTION)
@@ -547,29 +512,29 @@ def apply_global_styles():
     """
     st.markdown(LIGHT_THEME_CSS, unsafe_allow_html=True)
 
+# Backward compatibility alias
+apply_custom_theme = apply_global_styles
+
 def create_kpi_card(title: str, value: str, delta: str = None, delta_color: str = "positive", subtitle: str = "", icon: str = "📈"):
     """
-    Renders an institutional Light Fintech KPI card with rounded borders and subtle shadow.
+    Renders an institutional Light Fintech KPI card matching the reference UI exactly.
     """
     delta_html = ""
     if delta:
-        delta_class = "kpi-delta-positive" if delta_color == "positive" else ("kpi-delta-negative" if delta_color == "negative" else "kpi-subtext")
+        delta_class = "kpi-delta-positive" if delta_color == "positive" else ("kpi-delta-negative" if delta_color == "negative" else "kpi-card-desc")
         delta_html = f"<span class='{delta_class}'>{delta}</span>"
 
-    subtext_html = f"<span class='kpi-subtext'>{subtitle}</span>" if subtitle else ""
-    footer_sep = "<span style='color:#CBD5E1;'>•</span>" if (delta and subtitle) else ""
+    desc_html = f"<span class='kpi-card-desc'>{subtitle}</span>" if subtitle else ""
 
     html = f"""
-    <div class="kpi-card-box">
-        <div>
-            <div class="kpi-top-row">
-                <span class="kpi-title">{title}</span>
-                <div class="kpi-icon-pill">{icon}</div>
-            </div>
-            <div class="kpi-value">{value}</div>
+    <div class="kpi-card">
+        <div class="kpi-card-header">
+            <span class="kpi-card-title">{title}</span>
+            <div class="kpi-icon-container">{icon}</div>
         </div>
-        <div class="kpi-footer">
-            {delta_html} {footer_sep} {subtext_html}
+        <div class="kpi-card-metric">{value}</div>
+        <div class="kpi-card-footer">
+            {delta_html} {desc_html}
         </div>
     </div>
     """
@@ -579,23 +544,23 @@ def create_section_header(title: str, subtitle: str = ""):
     """
     Renders a standard clean section header.
     """
-    sub_html = f"<p class='section-subtitle'>{subtitle}</p>" if subtitle else ""
+    sub_html = f"<p class='analytics-section-subtitle'>{subtitle}</p>" if subtitle else ""
     st.markdown(f"""
-    <div class="section-header-box">
-        <h3 class="section-title">{title}</h3>
+    <div style="margin-top: 18px; margin-bottom: 12px;">
+        <h3 class="analytics-section-title">{title}</h3>
         {sub_html}
     </div>
     """, unsafe_allow_html=True)
 
 def create_empty_state(message: str = "No data available for the selected filters."):
     """
-    Displays a friendly, clean empty-state placeholder when filters yield 0 rows.
+    Displays a friendly placeholder when filters yield 0 rows.
     """
     st.markdown(f"""
-    <div class="empty-state-box">
+    <div style="background-color: #FFFFFF; border: 1px dashed #CBD5E1; border-radius: 10px; padding: 32px 20px; text-align: center; color: #64748B; font-size: 0.90rem; margin: 15px 0;">
         <div style="font-size: 1.5rem; margin-bottom: 6px;">🔍</div>
-        <b>{message}</b><br/>
-        <span style="font-size: 0.80rem; color: #94A3B8;">Try adjusting your selected filters or clearing the search criteria.</span>
+        <b style="color: #17233B;">{message}</b><br/>
+        <span style="font-size: 0.80rem; color: #94A3B8;">Adjust your selected filters or reset search parameters.</span>
     </div>
     """, unsafe_allow_html=True)
 
@@ -603,10 +568,6 @@ def render_global_header(page_title: str, page_subtitle: str, breadcrumb_page: s
     """
     Renders the consistent top dashboard banner on every page.
     """
-    # Check if reports exist for download
-    pdf_exists = os.path.exists(os.path.join(REPORTS_DIR, "Final_Report.pdf"))
-    pptx_exists = os.path.exists(os.path.join(REPORTS_DIR, "Presentation.pptx"))
-
     now_str = datetime.datetime.now().strftime("%d %b %Y, %H:%M")
 
     col_info, col_actions = st.columns([3, 1.2])
@@ -621,85 +582,80 @@ def render_global_header(page_title: str, page_subtitle: str, breadcrumb_page: s
 
     with col_actions:
         st.markdown(f"""
-        <div style="text-align: right; margin-top: 8px;">
-            <span class="header-badge">● Live SQLite Database</span>
-            <div style="font-size: 0.72rem; color: #64748B; margin-top: 4px;">Last Refreshed: {now_str} IST</div>
+        <div style="text-align: right; margin-top: 6px;">
+            <span class="header-status-pill">● Connected (SQLite)</span>
+            <div style="font-size: 12px; color: #64748B; margin-top: 4px;">Last Refreshed: {now_str} IST</div>
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("<hr style='border: none; border-top: 1px solid #E5EAF2; margin: 6px 0 16px 0;'/>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: none; border-top: 1px solid #E2E8F0; margin: 4px 0 16px 0;'/>", unsafe_allow_html=True)
 
-def render_sidebar(current_page: str = "Home"):
+def render_sidebar(current_page: str = "Overview"):
     """
-    Renders the clean, compact white sidebar with navigation and live database status.
+    Renders the single, fixed 300px white sidebar with Bluestock branding and native st.page_link routing.
+    No duplicate navigation menus!
     """
     with st.sidebar:
+        # Bluestock Logo & Brand Header
         st.markdown("""
-        <div style="padding-bottom: 14px; border-bottom: 1px solid #E5EAF2; margin-bottom: 14px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-                <div style="background-color:#2563EB; color:white; width:28px; height:28px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem;">B</div>
+        <div style="padding: 4px 0 16px 0; border-bottom: 1px solid #E2E8F0; margin-bottom: 16px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div style="background-color:#2563EB; color:white; width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.1rem; box-shadow:0 2px 4px rgba(37,99,235,0.25);">B</div>
                 <div>
-                    <div style="font-weight:700; font-size:1.0rem; color:#172033; letter-spacing:-0.01em;">BLUESTOCK</div>
-                    <div style="font-size:0.72rem; color:#64748B; font-weight:500;">Mutual Fund Analytics</div>
+                    <div style="font-weight:800; font-size:1.1rem; color:#17233B; letter-spacing:-0.02em; line-height:1.2;">BLUESTOCK</div>
+                    <div style="font-size:0.75rem; color:#64748B; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Mutual Fund Analytics</div>
                 </div>
             </div>
         </div>
         """, unsafe_allow_html=True)
 
-        st.caption("NAVIGATION")
-        pages = [
-            ("Home", "🏠", "Overview", "/"),
-            ("Industry Overview", "🏢", "01. Industry Overview", "/Industry_Overview"),
-            ("Fund Performance", "⚡", "02. Fund Performance", "/Fund_Performance"),
-            ("Investor Analytics", "👥", "03. Investor Analytics", "/Investor_Analytics"),
-            ("SIP & Market Trends", "📈", "04. SIP & Market Trends", "/SIP_Market_Trends"),
-        ]
+        st.caption("PLATFORM NAVIGATION")
 
-        st.markdown('<div class="sidebar-nav-container">', unsafe_allow_html=True)
-        for name, icon, label, path in pages:
-            active_cls = " active" if current_page == name else ""
-            st.markdown(f"""
-            <a href="{path}" target="_self" class="sidebar-nav-item{active_cls}">
-                <span>{icon}</span> <span>{label}</span>
-            </a>
-            """, unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+        # Native Streamlit Multi-Page Links (Seamless SPA routing without duplicate menus)
+        st.page_link("app.py", label="Overview", icon="🏠")
+        st.page_link("pages/1_Industry_Overview.py", label="Industry Overview", icon="🏢")
+        st.page_link("pages/2_Fund_Performance.py", label="Fund Performance", icon="⚡")
+        st.page_link("pages/3_Investor_Analytics.py", label="Investor Analytics", icon="👥")
+        st.page_link("pages/4_SIP_Market_Trends.py", label="SIP & Market Trends", icon="📈")
 
-        st.markdown("<hr style='border: none; border-top: 1px solid #E5EAF2; margin: 15px 0;'/>", unsafe_allow_html=True)
+        st.markdown("<hr style='border: none; border-top: 1px solid #E2E8F0; margin: 18px 0;'/>", unsafe_allow_html=True)
 
         # Dynamic Database Status Box
         cnt_df = query_db("SELECT (SELECT COUNT(*) FROM fact_nav) + (SELECT COUNT(*) FROM fact_transactions) + (SELECT COUNT(*) FROM fact_benchmark_indices) as total_recs")
-        total_recs = int(cnt_df["total_recs"].iloc[0]) if not cnt_df.empty and cnt_df["total_recs"].iloc[0] is not None else 87231
+        total_recs = int(cnt_df["total_recs"].iloc[0]) if not cnt_df.empty and cnt_df["total_recs"].iloc[0] is not None else 90497
 
         st.markdown(f"""
-        <div style="background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:10px 12px; font-size:0.75rem; color:#475569;">
-            <div style="font-weight:600; color:#1E293B; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
-                <span style="color:#16A34A; font-size:0.8rem;">●</span> Data Status: Connected
+        <div style="background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px; font-size:0.76rem; color:#475569;">
+            <div style="font-weight:700; color:#17233B; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                <span style="color:#16A34A; font-size:0.85rem;">●</span> Database Live
             </div>
-            <div>DB: <b>bluestock_mf.db</b></div>
-            <div>Records: <b>{total_recs:,}</b> verified</div>
-            <div>Engine: SQLite 3 / Star Schema</div>
+            <div>File: <b>bluestock_mf.db</b></div>
+            <div>Verified Records: <b>{total_recs:,}</b></div>
+            <div>Architecture: Star-Schema (SQLite)</div>
         </div>
         """, unsafe_allow_html=True)
 
+        st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
         st.caption("Bluestock Fintech Pvt. Ltd. © 2026")
 
 def render_disclaimer(synthetic_note: bool = False):
     """
-    Renders compliance and educational disclaimers.
+    Renders compliance and educational disclaimers without any raw HTML tags showing.
     """
-    note = ""
-    if synthetic_note:
-        note = "<b>Notice:</b> Investor transaction records are simulated for educational analytics and do not represent actual Bluestock customers.<br/>"
+    sim_text = "Notice: Investor transactions are simulated for educational data analytics.<br/>" if synthetic_note else ""
 
-    st.markdown(f"""
-    <div class="disclaimer-box">
-        {note}
-        <b>Educational Analytics Platform:</b> This platform is developed strictly for internship evaluation. 
-        It does not constitute financial or investment advisory. Mutual fund investments are subject to market risks. 
-        Read all scheme-related documents carefully.
+    html = f"""
+    <div class="disclaimer-banner">
+        <div class="disclaimer-title">Regulatory & Educational Analytics Disclaimer</div>
+        <div class="disclaimer-text">
+            {sim_text}
+            This analytics platform is developed strictly for internship evaluation and educational portfolio modeling. 
+            It does not constitute investment or financial advisory services. Mutual fund investments are subject to market risks. 
+            Read all scheme-related documents carefully.
+        </div>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.markdown(html, unsafe_allow_html=True)
 
 # =============================================================================
 # 6. PLOTLY LIGHT FINTECH CHART STYLING
@@ -710,7 +666,7 @@ def style_plot(fig, title: str = "", height: int = 380):
     """
     fig.update_layout(
         template="plotly_white",
-        title={"text": title, "font": {"size": 13, "color": "#172033", "family": "Inter, sans-serif"}},
+        title={"text": title, "font": {"size": 13, "color": "#17233B", "family": "Inter, sans-serif"}},
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         font={"color": "#64748B", "family": "Inter, sans-serif", "size": 11},
@@ -733,7 +689,7 @@ def style_plot(fig, title: str = "", height: int = 380):
         ),
         legend=dict(
             bgcolor="rgba(255, 255, 255, 0.9)",
-            bordercolor="#E5EAF2",
+            bordercolor="#E2E8F0",
             borderwidth=1,
             font=dict(size=10, color="#475569")
         ),
@@ -758,7 +714,6 @@ def render_fintech_table(df: pd.DataFrame, height: int = 420):
         create_empty_state("No data records match the selected filters.")
         return
 
-    # Add visual positive/negative badges for returns and Sharpe if present
     df_disp = df.copy()
     for col in df_disp.columns:
         if "CAGR" in col or "Return" in col or "Alpha" in col:
@@ -784,7 +739,3 @@ def render_fintech_table(df: pd.DataFrame, height: int = 420):
     </div>
     """
     st.markdown(styled_html, unsafe_allow_html=True)
-
-# Backward compatibility alias
-apply_custom_theme = apply_global_styles
-

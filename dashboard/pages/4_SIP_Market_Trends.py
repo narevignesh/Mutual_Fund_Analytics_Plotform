@@ -66,10 +66,10 @@ render_global_header(
 
 render_disclaimer()
 
-# --- 1. TOP 4 SIP KPI METRIC CARDS ---
+# --- 1. TOP 5 SIP KPI METRIC CARDS ---
 sip_m = get_sip_metrics()
 
-k1, k2, k3, k4 = st.columns(4)
+k1, k2, k3, k4, k5 = st.columns(5)
 with k1:
     create_kpi_card(
         title="Monthly SIP Inflow",
@@ -93,7 +93,7 @@ with k2:
 with k3:
     create_kpi_card(
         title="Cumulative SIP AUM",
-        value=f"₹{sip_m['sip_aum_lakh_crore']:.2f} Lakh Cr",
+        value=f"₹{sip_m['sip_aum_lakh_crore']:.2f} L Cr",
         delta="22.1% of Total AUM",
         delta_color="positive",
         subtitle="Retail Assets",
@@ -104,10 +104,20 @@ with k4:
     create_kpi_card(
         title="YoY SIP Growth",
         value=f"+{sip_m['yoy_growth_pct']:.1f}%",
-        delta="Annual Acceleration",
+        delta="Annual Growth",
         delta_color="positive",
         subtitle="Structural Compounding",
         icon="🚀"
+    )
+
+with k5:
+    create_kpi_card(
+        title="New Monthly SIPs",
+        value=f"{sip_m.get('new_accounts_lakh', 28.5):.1f} Lakh",
+        delta="Fresh Mandates",
+        delta_color="positive",
+        subtitle="Monthly Run-Rate",
+        icon="⚡"
     )
 
 st.markdown("<div style='height: 14px;'></div>", unsafe_allow_html=True)

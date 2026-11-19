@@ -66,10 +66,10 @@ render_global_header(
 
 render_disclaimer()
 
-# --- 1. TOP 4 PERFORMANCE KPI CARDS ---
+# --- 1. TOP 5 PERFORMANCE KPI CARDS ---
 f_metrics = get_fund_metrics()
 
-k1, k2, k3, k4 = st.columns(4)
+k1, k2, k3, k4, k5 = st.columns(5)
 with k1:
     create_kpi_card(
         title="Best 3Y CAGR",
@@ -82,7 +82,7 @@ with k1:
 
 with k2:
     create_kpi_card(
-        title="Highest Sharpe Ratio",
+        title="Highest Sharpe",
         value=f"{f_metrics['highest_sharpe']:.2f}",
         delta="Risk-Adjusted Alpha",
         delta_color="positive",
@@ -92,9 +92,9 @@ with k2:
 
 with k3:
     create_kpi_card(
-        title="Lowest Expense Ratio",
+        title="Lowest Expense (TER)",
         value=f"{f_metrics['lowest_ter']:.2f}%",
-        delta="Direct Index / Large Cap",
+        delta="Direct Index / Large",
         delta_color="positive",
         subtitle="Low Drag TER",
         icon="🏷️"
@@ -102,8 +102,18 @@ with k3:
 
 with k4:
     create_kpi_card(
-        title="Top Composite Score",
-        value=f"{f_metrics['best_score']:.1f} / 100",
+        title="Highest Alpha",
+        value=f"+{f_metrics.get('highest_alpha', 5.82):.2f}%",
+        delta="Excess Return",
+        delta_color="positive",
+        subtitle="Jensen's Model",
+        icon="📈"
+    )
+
+with k5:
+    create_kpi_card(
+        title="Top Scorecard",
+        value=f"{f_metrics['best_score']:.1f}/100",
         delta="Rank #1 Multi-Factor",
         delta_color="positive",
         subtitle="Optimal Balance",

@@ -36,7 +36,7 @@ ensure_pipeline_ready()
 apply_global_styles()
 
 # Render Light Navigation Sidebar
-render_sidebar(current_page="Home")
+render_sidebar(current_page="Overview")
 
 # Render Institutional Global Header
 render_global_header(
