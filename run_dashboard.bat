@@ -1,14 +1,14 @@
 @echo off
 REM ====================================================================
-REM BLUESTOCK FINTECH: MUTUAL FUND ANALYTICS PLATFORM
+REM MUTUAL FUND ANALYTICS PLATFORM
 REM Windows One-Click Dashboard Launcher
 REM ====================================================================
 
-title Bluestock Fintech - Mutual Fund Analytics Platform
+title Mutual Fund Analytics Platform
 color 0B
 
 echo ====================================================================
-echo BLUESTOCK FINTECH: MUTUAL FUND ANALYTICS PLATFORM
+echo MUTUAL FUND ANALYTICS PLATFORM
 echo Starting Local Streamlit Analytics Server...
 echo ====================================================================
 echo.
@@ -43,15 +43,14 @@ if not exist "db\bluestock_mf.db" (
     echo [INFO] Database 'db\bluestock_mf.db' verified.
 )
 
-REM 4. Launch Streamlit Dashboard via python -m streamlit (avoids Windows Application Control blocks on standalone exes)
+REM 4. Launch Streamlit Dashboard via python -m streamlit
 echo.
 echo ====================================================================
-echo Launching Streamlit UI at http://localhost:8501
+echo Launching Mutual Fund Analytics at http://localhost:8501
 echo Press Ctrl+C in this terminal window to stop the application.
 echo ====================================================================
 echo.
 
-python -m streamlit run dashboard\app.py
+python -m streamlit run app.py
 
 pause
-
