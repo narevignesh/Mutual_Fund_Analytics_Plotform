@@ -1,6 +1,6 @@
 /* ==========================================================================
    INDIAN MUTUAL FUND ANALYTICS — PREMIUM FINTECH LIGHT THEME
-   Design Reference: Pixel-perfect match to uploaded UI specification
+   Design Reference: Exact match to uploaded UI specification
    Palette: Background: #F4F7FF | Sidebar: #FFFFFF | Cards: #FFFFFF
    Primary Blue: #2563EB | Dark Navy: #101B45 | Secondary: #64748B
    Border: #E2E8F0 | Positive: #16A34A | Accent Light Blue: #EFF6FF
@@ -100,11 +100,14 @@ section[data-testid="stSidebar"] .block-container {
     margin-top: 4px;
 }
 
-/* Sidebar Navigation Items */
-div[data-testid="stRadio"] > div {
+/* Sidebar Navigation Items - Hide Radio Circle Bullets Completely */
+div[data-testid="stRadio"] > label {
+    display: none !important;
+}
+div[data-testid="stRadio"] [role="radiogroup"] {
     gap: 4px !important;
 }
-div[data-testid="stRadio"] label {
+div[data-testid="stRadio"] [role="radiogroup"] label {
     padding: 10px 14px !important;
     border-radius: 10px !important;
     font-size: 0.90rem !important;
@@ -115,13 +118,20 @@ div[data-testid="stRadio"] label {
     border-left: 4px solid transparent !important;
     display: flex !important;
     align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 2px !important;
 }
-div[data-testid="stRadio"] label:hover {
+/* Hide the circular radio input bullet */
+div[data-testid="stRadio"] [role="radiogroup"] label > div:first-child,
+div[data-testid="stRadio"] [role="radiogroup"] label input[type="radio"] {
+    display: none !important;
+}
+div[data-testid="stRadio"] [role="radiogroup"] label:hover {
     background-color: #F8FAFC !important;
     color: var(--primary-blue) !important;
 }
-div[data-testid="stRadio"] label[data-checked="true"],
-div[data-testid="stRadio"] label:has(input:checked) {
+div[data-testid="stRadio"] [role="radiogroup"] label[data-checked="true"],
+div[data-testid="stRadio"] [role="radiogroup"] label:has(input:checked) {
     background-color: var(--light-blue) !important;
     color: var(--primary-blue) !important;
     font-weight: 700 !important;
@@ -174,13 +184,13 @@ div[data-testid="stRadio"] label:has(input:checked) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 .breadcrumb-left {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--text-secondary);
 }
 .breadcrumb-home-icon {
@@ -269,12 +279,6 @@ div[data-testid="stRadio"] label:has(input:checked) {
 }
 
 /* 5. FOUR KPI CARDS (MATCHING REFERENCE UI) */
-.kpi-grid-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 22px;
-}
 .kpi-card-v2 {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
