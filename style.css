@@ -1,23 +1,29 @@
 /* ==========================================================================
-   MUTUAL FUND ANALYTICS — MINIMAL LIGHT THEME
-   Palette: Background: #F7F8FC | Cards: #FFFFFF | Primary: #2563EB
-   Heading: #172033 | Secondary: #64748B | Positive: #16A34A | Border: #E8ECF3
+   INDIAN MUTUAL FUND ANALYTICS — PREMIUM FINTECH LIGHT THEME
+   Design Reference: Pixel-perfect match to uploaded UI specification
+   Palette: Background: #F4F7FF | Sidebar: #FFFFFF | Cards: #FFFFFF
+   Primary Blue: #2563EB | Dark Navy: #101B45 | Secondary: #64748B
+   Border: #E2E8F0 | Positive: #16A34A | Accent Light Blue: #EFF6FF
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg-main: #F7F8FC;
+    --bg-main: #F4F7FF;
+    --sidebar-bg: #FFFFFF;
     --card-bg: #FFFFFF;
-    --text-primary: #172033;
+    --primary-blue: #2563EB;
+    --primary-blue-hover: #1D4ED8;
+    --dark-navy: #101B45;
+    --text-primary: #101B45;
     --text-secondary: #64748B;
-    --accent-primary: #2563EB;
-    --accent-teal: #0D9488;
-    --color-success: #16A34A;
-    --color-danger: #DC2626;
-    --border-color: #E8ECF3;
+    --border-color: #E2E8F0;
     --border-subtle: #F1F5F9;
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    --positive-green: #16A34A;
+    --negative-red: #DC2626;
+    --light-blue: #EFF6FF;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --card-radius: 16px;
 }
 
 /* 1. HIDE DEFAULT STREAMLIT MULTI-PAGE NAV MENU (PREVENTS DUPLICATION) */
@@ -27,7 +33,7 @@ ul[data-testid="stSidebarNavItems"] {
     display: none !important;
 }
 
-/* 2. BASE APP & BODY */
+/* 2. BASE APPLICATION & BODY STYLES */
 .stApp {
     background-color: var(--bg-main) !important;
     color: var(--text-primary) !important;
@@ -35,50 +41,63 @@ ul[data-testid="stSidebarNavItems"] {
 }
 
 .block-container {
-    padding-top: 1.6rem !important;
-    padding-bottom: 3rem !important;
-    max-width: 1360px !important;
+    padding-top: 1.2rem !important;
+    padding-bottom: 2.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 1400px !important;
 }
 
 header[data-testid="stHeader"] {
-    background-color: rgba(247, 248, 252, 0.95) !important;
-    border-bottom: 1px solid var(--border-color) !important;
+    background-color: transparent !important;
+    border-bottom: none !important;
 }
 
-/* 3. SIDEBAR STYLING (~250px FIXED WIDTH) */
+/* 3. SIDEBAR STYLING (CLEAN WHITE PANEL ~260px) */
 section[data-testid="stSidebar"] {
     width: 260px !important;
     min-width: 260px !important;
     max-width: 260px !important;
     background-color: #FFFFFF !important;
     border-right: 1px solid var(--border-color) !important;
-    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.02) !important;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.02) !important;
 }
 
 section[data-testid="stSidebar"] .block-container {
-    padding-top: 1.4rem !important;
+    padding-top: 1.5rem !important;
     padding-left: 1.1rem !important;
     padding-right: 1.1rem !important;
+    padding-bottom: 1.5rem !important;
 }
 
-/* Sidebar Title Header */
-.sidebar-brand-box {
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 16px;
+/* Sidebar Header Brand */
+.sidebar-header-box {
+    margin-bottom: 24px;
 }
-.sidebar-brand-title {
-    font-size: 15px;
+.sidebar-icon-container {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #EFF6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+.sidebar-title {
+    font-size: 17px;
     font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: -0.01em;
+    color: var(--dark-navy);
+    line-height: 1.2;
     margin: 0;
+    letter-spacing: -0.01em;
 }
-.sidebar-brand-sub {
-    font-size: 11px;
+.sidebar-subtitle {
+    font-size: 12px;
     color: var(--text-secondary);
     font-weight: 500;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 /* Sidebar Navigation Items */
@@ -86,168 +105,410 @@ div[data-testid="stRadio"] > div {
     gap: 4px !important;
 }
 div[data-testid="stRadio"] label {
-    padding: 9px 12px !important;
-    border-radius: 8px !important;
-    font-size: 0.88rem !important;
+    padding: 10px 14px !important;
+    border-radius: 10px !important;
+    font-size: 0.90rem !important;
     font-weight: 500 !important;
     color: #475569 !important;
     transition: all 0.15s ease !important;
     cursor: pointer !important;
-    border: 1px solid transparent !important;
+    border-left: 4px solid transparent !important;
+    display: flex !important;
+    align-items: center !important;
 }
 div[data-testid="stRadio"] label:hover {
-    background-color: #F1F5F9 !important;
-    color: var(--accent-primary) !important;
+    background-color: #F8FAFC !important;
+    color: var(--primary-blue) !important;
 }
 div[data-testid="stRadio"] label[data-checked="true"],
 div[data-testid="stRadio"] label:has(input:checked) {
-    background-color: #EFF6FF !important;
-    color: var(--accent-primary) !important;
-    font-weight: 600 !important;
-    border-left: 3px solid var(--accent-primary) !important;
+    background-color: var(--light-blue) !important;
+    color: var(--primary-blue) !important;
+    font-weight: 700 !important;
+    border-left: 4px solid var(--primary-blue) !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
 }
 
-/* 4. MAIN PAGE HEADINGS */
-.page-header-box {
-    margin-bottom: 20px;
+/* Sidebar Quick Insight Card */
+.sidebar-insight-card {
+    background: linear-gradient(180deg, #F0F6FF 0%, #EBF3FF 100%);
+    border: 1px solid #DCE7FB;
+    border-radius: 14px;
+    padding: 14px 14px 10px 14px;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
 }
-.page-title {
-    font-size: 26px !important;
+.sidebar-insight-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+.insight-bulb {
+    font-size: 15px;
+}
+.insight-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--dark-navy);
+}
+.sidebar-insight-body {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #475569;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+.sidebar-insight-wave {
+    width: 100%;
+    margin-top: -6px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 4. MAIN PAGE BREADCRUMB & HEADER */
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.breadcrumb-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+.breadcrumb-home-icon {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+.breadcrumb-sep {
+    color: #94A3B8;
+    font-size: 11px;
+}
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.header-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.live-data-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #F0FDF4;
+    border: 1px solid #DCFCE7;
+    color: var(--positive-green);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+.live-pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--positive-green);
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.25);
+    display: inline-block;
+}
+.refresh-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.refresh-icon-btn:hover {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+/* Header Banner Layout */
+.header-banner-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.header-title-box {
+    flex: 1;
+}
+.page-title-v2 {
+    font-size: 32px !important;
     font-weight: 800 !important;
-    color: var(--text-primary) !important;
-    margin: 0 !important;
-    letter-spacing: -0.02em !important;
-    line-height: 1.25 !important;
+    color: var(--dark-navy) !important;
+    margin: 0 0 6px 0 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.2 !important;
 }
-.page-subtitle {
-    font-size: 13.5px !important;
+.page-subtitle-v2 {
+    font-size: 14.5px !important;
     color: var(--text-secondary) !important;
-    margin: 4px 0 0 0 !important;
+    margin: 0 !important;
     font-weight: 400 !important;
 }
+.header-illustration-box {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
 
-/* 5. FOUR EQUAL-WIDTH KPI CARDS */
-.kpi-row {
+/* 5. FOUR KPI CARDS (MATCHING REFERENCE UI) */
+.kpi-grid-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-bottom: 20px;
-}
-.kpi-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 16px 18px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 106px;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-.kpi-card:hover {
-    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.06);
-    transform: translateY(-1px);
-}
-.kpi-title {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
-}
-.kpi-value {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--text-primary);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-}
-.kpi-subtext {
-    font-size: 11.5px;
-    color: var(--text-secondary);
-    margin-top: 5px;
-}
-.badge-pos {
-    color: var(--color-success);
-    font-weight: 600;
-}
-.badge-neg {
-    color: var(--color-danger);
-    font-weight: 600;
-}
-
-/* 6. WHITE ANALYTICS CONTAINERS */
-.analytics-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 18px 20px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 18px;
-}
-.analytics-card-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0 0 4px 0;
-}
-.analytics-card-subtitle {
-    font-size: 12px;
-    color: var(--text-secondary);
-    margin: 0 0 14px 0;
-}
-
-/* 7. INFORMATION & NOTICE BANNERS */
-.info-banner {
-    background-color: #F8FAFC;
-    border: 1px solid var(--border-color);
-    border-left: 3px solid var(--accent-primary);
-    border-radius: 6px;
-    padding: 11px 15px;
-    font-size: 12.5px;
-    color: #475569;
-    margin-bottom: 18px;
-    line-height: 1.45;
-}
-
-/* 8. KEY MARKET INSIGHTS CARD */
-.market-insights-box {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 18px 20px;
-    box-shadow: var(--shadow-sm);
-    margin-top: 10px;
     margin-bottom: 22px;
 }
-.insights-header {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+.kpi-card-v2 {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 18px 20px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    height: 100%;
 }
-.insight-item {
-    padding: 10px 14px;
-    background-color: #F8FAFC;
-    border-left: 3px solid var(--accent-primary);
-    border-radius: 6px;
-    font-size: 12.5px;
-    color: #334155;
-    margin-bottom: 8px;
-    line-height: 1.45;
+.kpi-card-v2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+.kpi-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.kpi-icon-blue {
+    background-color: #EBF3FF;
+    color: #2563EB;
+}
+.kpi-icon-purple {
+    background-color: #F3E8FF;
+    color: #7C3AED;
+}
+.kpi-icon-green {
+    background-color: #E8FDF0;
+    color: #16A34A;
+}
+.kpi-icon-orange {
+    background-color: #FFF3E0;
+    color: #EA580C;
 }
 
-/* 9. DATA TABLE (ZERO PYARROW) */
+.kpi-content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.kpi-label-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+}
+.kpi-label-text {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.kpi-value-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark-navy);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 4px;
+}
+.kpi-trend-text {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--positive-green);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Tooltip on Info Icon */
+.info-tooltip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #94A3B8;
+    cursor: help;
+    position: relative;
+    user-select: none;
+}
+.info-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #101B45;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.45;
+    white-space: normal;
+    width: 220px;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.20);
+    pointer-events: none;
+}
+
+/* 6. WHITE CHART CARDS */
+.chart-card-v2 {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 20px 22px 14px 22px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 22px;
+}
+.chart-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+}
+.chart-header-icon {
+    font-size: 16px;
+    color: var(--primary-blue);
+}
+.chart-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin: 0;
+}
+.chart-card-subtitle {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin: 0 0 12px 0;
+    padding-left: 24px;
+}
+
+/* 7. KEY MARKET INSIGHTS CARD (MATCHING REFERENCE UI) */
+.insights-card-v2 {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 20px 24px;
+    box-shadow: var(--card-shadow);
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+.insights-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.insights-bulb-icon {
+    font-size: 17px;
+    color: var(--primary-blue);
+}
+.insights-heading-text {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--dark-navy);
+}
+.insights-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.insight-col-v2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.insight-icon-blue {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.insight-icon-gold {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #FFFBEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.insight-desc-v2 {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.45;
+}
+.insight-desc-v2 b {
+    color: var(--dark-navy);
+}
+
+/* 8. GENERAL ANALYTICS CARDS & SECTIONS */
+.analytics-section-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 20px 24px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 22px;
+}
+.analytics-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin-bottom: 4px;
+}
+.analytics-section-subtitle {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* 9. ZERO-PYARROW DATA TABLES */
 .table-scroll-container {
     max-height: 420px;
     overflow-y: auto;
     overflow-x: auto;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #FFFFFF;
     margin-bottom: 14px;
 }
@@ -255,7 +516,7 @@ div[data-testid="stRadio"] label:has(input:checked) {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     color: var(--text-primary);
 }
 .clean-data-table th {
@@ -263,7 +524,7 @@ div[data-testid="stRadio"] label:has(input:checked) {
     color: #334155 !important;
     font-weight: 600;
     text-align: left;
-    padding: 10px 12px;
+    padding: 11px 14px;
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -271,33 +532,72 @@ div[data-testid="stRadio"] label:has(input:checked) {
     white-space: nowrap;
 }
 .clean-data-table td {
-    padding: 8px 12px;
+    padding: 10px 14px;
     border-bottom: 1px solid #F1F5F9;
     white-space: nowrap;
 }
 .clean-data-table tr:hover td {
     background-color: #F8FAFC;
 }
+.badge-pos {
+    color: var(--positive-green);
+    font-weight: 600;
+    background: #F0FDF4;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid #DCFCE7;
+}
+.badge-neg {
+    color: var(--negative-red);
+    font-weight: 600;
+    background: #FEF2F2;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid #FEE2E2;
+}
 
-/* 10. CLEAN INPUTS & CONTROLS */
+/* 10. INPUT CONTROLS, SELECTS & BUTTONS */
 div[data-baseweb="select"] > div {
     background-color: #FFFFFF !important;
     border-color: var(--border-color) !important;
-    border-radius: 7px !important;
-    font-size: 0.86rem !important;
+    border-radius: 8px !important;
+    font-size: 0.88rem !important;
 }
 .stDownloadButton button {
     background-color: #FFFFFF !important;
-    color: var(--accent-primary) !important;
-    border: 1px solid var(--accent-primary) !important;
-    border-radius: 7px !important;
-    font-size: 0.82rem !important;
+    color: var(--primary-blue) !important;
+    border: 1px solid var(--primary-blue) !important;
+    border-radius: 8px !important;
+    font-size: 0.84rem !important;
     font-weight: 600 !important;
-    padding: 6px 14px !important;
+    padding: 8px 16px !important;
     transition: all 0.15s ease;
 }
 .stDownloadButton button:hover {
-    background-color: #EFF6FF !important;
-    color: #1D4ED8 !important;
-    border-color: #1D4ED8 !important;
+    background-color: var(--light-blue) !important;
+    color: var(--primary-blue-hover) !important;
+    border-color: var(--primary-blue-hover) !important;
+}
+
+/* 11. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .kpi-grid-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .insights-grid-v2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+@media (max-width: 640px) {
+    .kpi-grid-row {
+        grid-template-columns: 1fr;
+    }
+    .header-banner-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-illustration-box {
+        display: none;
+    }
 }

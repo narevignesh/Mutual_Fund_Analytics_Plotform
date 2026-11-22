@@ -132,7 +132,12 @@ def get_market_insights() -> list:
             LIMIT 5
         );
     """)
-    df_tot = query_db("SELECT SUM(aum_crore) as tot FROM fact_aum WHERE (year, quarter) = (SELECT MAX(year), MAX(quarter) FROM fact_aum);")
+    df_tot = query_db("""
+        SELECT SUM(aum_crore) as tot 
+        FROM fact_aum 
+        WHERE year = (SELECT MAX(year) FROM fact_aum) 
+          AND quarter = (SELECT MAX(quarter) FROM fact_aum WHERE year = (SELECT MAX(year) FROM fact_aum));
+    """)
     top5_share = round((df_top5["top5_aum"].iloc[0] / df_tot["tot"].iloc[0]) * 100.0, 1) if not df_top5.empty and not df_tot.empty else 58.4
 
     df_folios = query_db("SELECT equity_folios_crore, total_folios_crore FROM fact_industry_folios ORDER BY month DESC LIMIT 1;")
@@ -143,6 +148,35 @@ def get_market_insights() -> list:
         f"SIP Investment Momentum: Monthly systematic inflows crossed ₹{latest_sip:,.0f} Crore, recording a {sip_multiple}x surge since early 2022 as retail disciplined investing expanded across India.",
         f"Asset Concentration: The top 5 mutual fund houses manage {top5_share}% of total industry assets, demonstrating significant investor preference for established fund managers.",
         f"Equity Growth: Equity mutual fund folios now stand at {eq_folios:.1f} Crore accounts, accounting for approximately {eq_pct:.0f}% of all mutual fund folios nationwide."
+    ]
+
+@st.cache_data(ttl=300)
+def get_key_market_insights_cards() -> list:
+    """
+    Returns the 3 concise Key Market Insights matching the reference UI screenshot:
+    1. Industry Growth (from ₹25L Cr to ₹44.31L Cr)
+    2. Investor Participation (SIP contributions rising)
+    3. Market Distribution (Equity funds majority)
+    """
+    return [
+        {
+            "type": "growth",
+            "icon": "bar",
+            "title": "Industry Growth",
+            "desc": "Industry AUM has grown steadily from <b>₹25L Cr</b> to <b>₹44.31L Cr</b>."
+        },
+        {
+            "type": "participation",
+            "icon": "users",
+            "title": "Investor Participation",
+            "desc": "SIP contributions are rising, showing strong investor confidence."
+        },
+        {
+            "type": "distribution",
+            "icon": "star",
+            "title": "Market Distribution",
+            "desc": "Equity funds continue to attract majority of investments."
+        }
     ]
 
 @st.cache_data(ttl=300)

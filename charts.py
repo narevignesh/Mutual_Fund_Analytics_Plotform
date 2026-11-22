@@ -59,32 +59,132 @@ def base_layout(fig, title: str = "", height: int = 360):
 # 1. OVERVIEW PAGE CHARTS (4 CHARTS)
 # =============================================================================
 def chart_industry_aum_growth(df: pd.DataFrame):
-    """CHART 1: Industry AUM Growth (Quarterly Area Chart)"""
+    """CHART 1: Industry AUM Growth (Quarterly Area Chart Matching Reference UI)"""
     if df.empty:
         return None
-    fig = px.area(
-        df, x="period", y="aum_thousand_cr",
-        labels={"period": "Quarter", "aum_thousand_cr": "AUM (₹ Thousand Cr)"},
-        color_discrete_sequence=["#2563EB"]
+    d = df.copy()
+    d["aum_lakh_cr"] = d["aum_thousand_cr"] / 100.0
+    
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=d["period"],
+        y=d["aum_lakh_cr"],
+        mode="lines+markers",
+        name="Industry AUM",
+        line=dict(color="#2563EB", width=3, shape="spline"),
+        marker=dict(size=6, color="#2563EB"),
+        fill="tozeroy",
+        fillcolor="rgba(37, 99, 235, 0.12)",
+        hovertemplate="<b>%{x}</b><br>AUM: ₹%{y:.2f} Lakh Cr<extra></extra>"
+    ))
+    
+    # Add callout pill for the latest point
+    last_idx = len(d) - 1
+    last_val = d["aum_lakh_cr"].iloc[last_idx]
+    fig.add_annotation(
+        x=d["period"].iloc[last_idx],
+        y=last_val,
+        text=f"<b>₹{last_val:.2f} L Cr</b>",
+        showarrow=True,
+        arrowhead=0,
+        arrowcolor="#2563EB",
+        arrowwidth=1.5,
+        ax=0,
+        ay=-28,
+        bgcolor="#2563EB",
+        font=dict(color="#FFFFFF", size=11, family="Inter, sans-serif"),
+        borderpad=4,
+        bordercolor="#2563EB",
+        borderwidth=1,
+        opacity=0.95
     )
-    fig.update_traces(
-        line=dict(width=2.4, color="#2563EB"),
-        fillcolor="rgba(37, 99, 235, 0.10)"
+    
+    fig = base_layout(fig, "", height=320)
+    
+    # Yearly ticks for x axis (2022, 2023, 2024, 2025)
+    tick_periods = []
+    tick_labels = []
+    for yr in ["2022", "2023", "2024", "2025"]:
+        matches = d[d["period"].str.startswith(yr)]
+        if not matches.empty:
+            tick_periods.append(matches["period"].iloc[0])
+            tick_labels.append(yr)
+            
+    fig.update_layout(
+        margin=dict(l=45, r=20, t=25, b=30),
+        xaxis=dict(
+            title="",
+            tickvals=tick_periods,
+            ticktext=tick_labels,
+            showgrid=False
+        ),
+        yaxis=dict(
+            title="AUM (₹ Lakh Cr)",
+            range=[0, 52],
+            tickvals=[0, 10, 20, 30, 40, 50],
+            gridcolor="#F1F5F9"
+        )
     )
-    return base_layout(fig, "Industry AUM Growth (2022–2025)", height=340)
+    return fig
 
 def chart_monthly_sip_trend(df: pd.DataFrame):
-    """CHART 2: Monthly SIP Investment Trend"""
+    """CHART 2: Monthly SIP Investment Trend Matching Reference UI"""
     if df.empty:
         return None
+    d = df.copy()
     fig = go.Figure()
     fig.add_trace(go.Bar(
-        x=df["month"], y=df["sip_inflow_crore"],
-        name="SIP Inflow (₹ Cr)",
-        marker_color="#0D9488",
-        opacity=0.85
+        x=d["month"],
+        y=d["sip_inflow_crore"],
+        name="SIP Inflow",
+        marker_color="#2563EB",
+        opacity=0.92,
+        hovertemplate="<b>%{x}</b><br>Inflow: ₹%{y:,.0f} Cr<extra></extra>"
     ))
-    return base_layout(fig, "Monthly SIP Investment Trend", height=340)
+    
+    # Add callout box for latest bar
+    last_sip = d["sip_inflow_crore"].iloc[-1]
+    fig.add_annotation(
+        x=d["month"].iloc[-1],
+        y=last_sip,
+        text=f"<b>₹{int(last_sip):,} Cr</b>",
+        showarrow=False,
+        yshift=14,
+        bgcolor="#FFFFFF",
+        font=dict(color="#101B45", size=11, family="Inter, sans-serif"),
+        borderpad=4,
+        bordercolor="#CBD5E1",
+        borderwidth=1
+    )
+    
+    fig = base_layout(fig, "", height=320)
+    
+    # Yearly ticks for x axis (2022, 2023, 2024, 2025)
+    tick_months = []
+    tick_labels = []
+    for yr in ["2022", "2023", "2024", "2025"]:
+        matches = d[d["month"].str.startswith(yr)]
+        if not matches.empty:
+            tick_months.append(matches["month"].iloc[0])
+            tick_labels.append(yr)
+            
+    fig.update_layout(
+        margin=dict(l=50, r=20, t=25, b=30),
+        xaxis=dict(
+            title="",
+            tickvals=tick_months,
+            ticktext=tick_labels,
+            showgrid=False
+        ),
+        yaxis=dict(
+            title="SIP Inflow (₹ Cr)",
+            range=[0, 36000],
+            tickvals=[0, 10000, 20000, 30000, 40000],
+            ticktext=["0", "10K", "20K", "30K", "40K"],
+            gridcolor="#F1F5F9"
+        )
+    )
+    return fig
 
 def chart_top_amcs_aum(df: pd.DataFrame):
     """CHART 3: Top 10 Fund Houses by AUM"""
