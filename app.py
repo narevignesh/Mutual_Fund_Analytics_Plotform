@@ -17,7 +17,7 @@ if ROOT_DIR not in sys.path:
 
 from data import (
     format_currency, format_pct, format_num,
-    get_overview_kpis, get_market_insights, get_overview_charts_data, get_key_market_insights_cards,
+    get_overview_kpis, get_market_insights, get_overview_charts_data,
     get_industry_kpis, get_industry_filter_options, get_industry_overview_data,
     get_fund_kpis, get_fund_filter_options, get_filtered_funds, get_single_fund_profile, get_nav_history_series,
     get_investor_kpis, get_investor_filter_options, get_filtered_investor_data,
